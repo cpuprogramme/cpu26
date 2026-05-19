@@ -6,8 +6,8 @@
 	font-style: normal;
 	font-weight: 400;
 	src: local('Roboto Condensed'), local('RobotoCondensed-Regular'),
-	url(/themes/cpu-15/fonts/RobotoCondensed-Regular.woff2) format('woff2'),
-	url(/themes/cpu-15/fonts/RobotoCondensed-Regular.ttf) format('truetype');
+	url(/themes/cpu-26/fonts/RobotoCondensed-Regular.woff2) format('woff2'),
+	url(/themes/cpu-26/fonts/RobotoCondensed-Regular.ttf) format('truetype');
 	font-display : fallback;
 }
 @font-face {
@@ -15,8 +15,8 @@
 	font-style: normal;
 	font-weight: 700;
 	src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'),
-	url(/themes/cpu-15/fonts/RobotoCondensed-Bold.woff2) format('woff2'),
-	url(/themes/cpu-15/fonts/RobotoCondensed-Bold.ttf) format('truetype');
+	url(/themes/cpu-26/fonts/RobotoCondensed-Bold.woff2) format('woff2'),
+	url(/themes/cpu-26/fonts/RobotoCondensed-Bold.ttf) format('truetype');
 	font-display : fallback;
 }
 @font-face {
@@ -24,8 +24,8 @@
 	font-style: italic;                                            
 	font-weight: 400;                                              
 	src: local('Roboto Condensed Italic'), local('RobotoCondensed-Italic'),
-	url(/themes/cpu-15/fonts/RobotoCondensed-Italic.woff2) format('woff2'),
-	url(/themes/cpu-15/fonts/RobotoCondensed-Italic.ttf) format('truetype');
+	url(/themes/cpu-26/fonts/RobotoCondensed-Italic.woff2) format('woff2'),
+	url(/themes/cpu-26/fonts/RobotoCondensed-Italic.ttf) format('truetype');
 	font-display : fallback;
 }
 
@@ -34,8 +34,8 @@
 	font-style: italic;
 	font-weight: 700;
 	src: local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'),
-	url(/themes/cpu-15/fonts/RobotoCondensed-BoldItalic.woff2) format('woff2'),
-	url(/themes/cpu-15/fonts/RobotoCondensed-BoldItalic.ttf) format('truetype');
+	url(/themes/cpu-26/fonts/RobotoCondensed-BoldItalic.woff2) format('woff2'),
+	url(/themes/cpu-26/fonts/RobotoCondensed-BoldItalic.ttf) format('truetype');
 	font-display : fallback;
 }
 
@@ -84,11 +84,11 @@ body/*:root*/ {
 
 	--cpu-height : 64px;
 	--cpu-font-small-size : calc(var(--cpu-font-size) * 0.8);
-	--cpu-background : #333;
+	--cpu-background : transparent;
 	--cpu-color : #ddd;
 	--cpu-playing-background : #444;
 	--cpu-playing-color : #fff;
-	--cpu-focus-background : #fff;
+	--cpu-focus-background : transparent;
 	--cpu-focus-color : #000;
 	--cpu-error-background : #a00 ;
 	--cpu-error-color : #ff7 ;
@@ -118,9 +118,9 @@ body/*:root*/ {
 		--calque-out-within : #000000bb;
 		--calque-out : black;
 
-		--cpu-background : #ddd;
+		--cpu-background : transparent;
 		--cpu-color : #222;
-		--cpu-playing-background : #eee;
+		--cpu-playing-background : transparent;
 		--cpu-playing-color : #111;
 		--cpu-focus-background : #000;
 		--cpu-focus-color : #fff;
@@ -328,18 +328,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight : bold; /* for paint before having loaded roboto */
 	margin: 0; }
 
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v *
-.visually-hidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px; }
-
-	*/
 
 /*
 * Scut, a collection of Sass utilities to ease and improve our implementations of common style-code patterns.
@@ -382,17 +370,6 @@ a {
 	color: var(--link);
 	text-decoration: none;
 }
-
-/* we have many links in some text, not useful. (and list with links are not underlined)
-p a:link, p a:visited {
-	border-bottom: 1px solid gainsboro; 
-}
-p a:visited {
-	border-bottom-style: dotted; 
-}
-p a:hover, p  a:active {
-	border-color: var(--link); 
-}*/
 
 
 hr {
@@ -467,9 +444,7 @@ ul ul, ul ol, ol ol, ol ul {
 .post-date,
 .post-cat,
 .post-tags-list
-/*.post-permalink, 
-.comment_count,
-.attach_count */ {
+{
 	padding-left: 22px;
 	background-repeat: no-repeat;
 	background-position: 0 50%;
@@ -1086,9 +1061,9 @@ h1 {
 .header {
 	background : var(--background-neutral) var(--background-img);
 	line-height: normal;
-		padding-top : 20px;
-		position: sticky;
-		top: -20px;
+	padding-top : 20px;
+	position: sticky;
+	top: -20px;
 	z-index : 9;
 	margin-bottom : 1em;
 }
@@ -1191,29 +1166,37 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 	background : #D12625;
 }
 
+	/*
 .banner-article {
 	background-size: 100% auto;
 	background-position : 50% 50%;
 	background-repeat : no-repeat;
 	background-color: #ccc;
 }
+*/
 
 .noir {
 	color : black;
 }
 
-
+/*
 .banner-article.odd {
 	background-color: #bbb;
 }
+*/
 
 .banner-article.full, .banner-article.short, .banner-article.title {
 	padding-top : 2em;
 }
 
 .calque {
-	background : var(--calque-bg);
+	/*background : var(--calque-bg);*/
 	text-shadow : 1px 1px 0 var(--calque-out), -1px 1px 0 var(--calque-out), 1px -1px 0 var(--calque-out), -1px -1px 0 var(--calque-out);
+	/*
+	pas joli du tout par rapport à text-shadow : il manque la possibilité de faire le stroke centré, inset ou outset
+	-webkit-text-stroke-width: 1px;
+  	-webkit-text-stroke-color: var(--calque-out);
+  	*/
 	line-height: normal; /* due to Roboto */
 	/*backdrop-filter: blur(5px);*/
 }
@@ -1315,7 +1298,7 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
 	text-overflow: ellipsis; 
 }
 .spacer {
-		flex : 1 0 auto !important; /* OUI, JE SAIS */
+	flex : 1 0 auto !important; /* OUI, JE SAIS */
 }
 
 .only-small {
@@ -1339,12 +1322,12 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
 }
 
 .dc-page .post-date  {
-		display : none;
+	display : none;
 }
 
 .dc-page .banner-article {
-		background : none;
-		padding-top : 0px;
+	background : none;
+	padding-top : 0px;
 }
 
 
