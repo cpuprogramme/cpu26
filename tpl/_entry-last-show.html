@@ -1,31 +1,9 @@
-
-	<style>
-
-		article.banner-article {
-			padding : 1em ;
-			background-color: red;
-
-
-			& .encloser {
-				display : flex;
-				flex-direction: row;
-			}
-
-			& img.illustration {
-				width : 200px;
-				height : 200px;
-			}
-		}
-	</style>
-
 <article id="p{{tpl:EntryID}}" class="post {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} full banner-article" role="article">
 
-
 	<a class="encloser" href="{{tpl:EntryURL}}">
+		{{tpl:include src="_entry-illustration.html"}}
 
-		<img class="illustration" src="{{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}}" alt="" />
-
-		<div>
+		<div class="calque">
 			<p>
 				<span class="not-small">Précédente émission </span>diffusée le <time datetime="{{tpl:EntryDate iso8601="1"}}">{{tpl:EntryDate}}</time>
 				<tpl:EntrySeries>
@@ -50,8 +28,8 @@
 
 			</p>
 		</div>
-
 	</a>
+
 	<tpl:EntryIf operator="or" show_comments="1" show_pings="1" has_attachment="1">
 		<tpl:Attachments>
 			<tpl:AttachmentIf is_mp3="1">
@@ -59,6 +37,5 @@
 			</tpl:AttachmentIf>
 		</tpl:Attachments>
 	</tpl:EntryIf>
-
 
 </article>
