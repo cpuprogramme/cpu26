@@ -861,9 +861,8 @@ ul ul, ul ol, ol ol, ol ul {
 		display : flex;
 		flex-direction: column;
 		width : 100%;
-
 		& h3 {
-			align-items : middle;
+			margin : 0 ;
 		}
 	}
 }
@@ -1260,7 +1259,11 @@ article.banner-article {
 	& .encloser {
 		display : flex;
 		flex-direction: row;
+		align-items : center;
 		gap: 10px;
+		& > .calque {
+			width : 100%;
+		}
 	}
 
 	& picture {
@@ -1268,6 +1271,7 @@ article.banner-article {
 			width : var(--illus-width);
 			height : var(--illus-width);
 			aspect-ratio: 1 / 1;
+			display : grid; /* nécessiare pour virer le comportement inline */
 		}
 	}
 }
@@ -1287,6 +1291,22 @@ article.banner-article {
 .banner-article.minimal {
 	--illus-width : 150px;
 }
+.banner-article.img-on-right .encloser {
+	flex-direction: row-reverse;
+}
+
+
+.banner-article.entry-series img:before {
+	content: "";
+	position: absolute;
+	width: var(--illus-width);
+	height: var(--illus-width);
+	top: 5px;
+	left: -5px;
+	z-index: -1;
+	background-color: var(--color-neutral);
+}
+
 
 .calque {
 	/*background : var(--calque-bg);*/
@@ -1432,18 +1452,25 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
 
 
 @media (min-width: 40em) {
-	.flex {
-			display : flex;
+	.flex-entries {
+		display : flex;
+		flex-wrap : wrap;
+		article {
+			width : 50%
+		}
 	}
 
+	.flex {
+		display : flex;
+	}
 
 	.flex.wrap {
-			flex-wrap : wrap;
+		flex-wrap : wrap;
 	}
 
 	.flex article {
-			flex : 1 1 20em;
-			margin : 2px;
+		flex : 1 1 20em;
+		margin : 2px;
 	}
 
 }

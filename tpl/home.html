@@ -33,13 +33,13 @@
 			{{tpl:EntryContent}}
 		</tpl:Entries>
 
-		<tpl:Entries lastn="4" category="Programmes ?sub" no_context="1">
+		<tpl:Entries lastn="5" category="Programmes ?sub" no_context="1">
 
 			<tpl:LoopPosition start="1" length="1">
 				{{tpl:include src="_entry-last-show.html"}}
 
 				<h2 class="notsobig">Programmes précédents</h2>
-				<div class="flex">
+				<div class="flex-entries">
 			</tpl:LoopPosition>
 
 			<tpl:LoopPosition start="2">
@@ -54,8 +54,8 @@
 		</p>
 
 		<h2 class="notsobig">Programmes en séries</h2>
-		<div class="flex">
-			<tpl:Series sortby="latest" order="desc" limit="4">
+		<div class="flex-entries">
+			<tpl:Series sortby="latest" order="desc" limit="5">
 				<tpl:SeriesNotLostAndFound>
 					<tpl:Entries lastn="1">
 						{{tpl:include src="_entry-series.html"}}
@@ -69,7 +69,7 @@
 
 		<h2  class="notsobig">Chroniques, Interviewes, et autres</h2>
 
-		<div class="flex wrap">
+		<div class="flex-entries">
 			<tpl:Entries lastn="12" category="Programmes ?not" no_context="1">
 				{{tpl:include src="_entry-minimal.html"}}
 			</tpl:Entries>
