@@ -69,6 +69,7 @@ body/*:root*/ {
 	--cpu-font-size : 16px; /* should be inverted  */
 	--cpu-line-height : 1;
 	--background-neutral : #eee;
+	--background-sidebar : #ddd;
 	--color-neutral : #222;
 	--background-img : url(/themes/cpu-15/img/bg_light.png);
 	--background-main : #fff;
@@ -109,7 +110,9 @@ body/*:root*/ {
 	body /*:root*/ {
 		--color-neutral : #ddd;
 		--background-neutral : #111;
-		--background-img : url(/themes/cpu-15/img/bg_dark.png);
+		--background-sidebar : #222;
+		/*--background-img : url(/themes/cpu-15/img/bg_dark.png);*/
+		--background-img : url(/themes/cpu-26/img/background_graphy-dark.png);
 		--background-main : #000;
 		--background-comment : #122;
 		--link : #F1CB29;
@@ -663,7 +666,7 @@ ul ul, ul ol, ol ol, ol ul {
 
 .sidebar {
 	padding-top: 2em;
-	background: var(--color-neutral) url(/themes/cpu-15/img/bg_dark.png);
+	background: var(--background-sidebar) /*url(var(--background-img))*/;
 	color: white;
 	text-shadow: var(--color-neutral) 0px -1px 0px; 
 	flex: 0 0 33%;
@@ -1112,7 +1115,8 @@ button.submit:active, button.preview:active {
 
 .banner {
 	display : flex;
-			flex-direction: row;
+	flex-direction: row;
+	background : var(--background-neutral);
 }
 
 h1 {
@@ -1605,3 +1609,4 @@ cpu-audio {
 	  background : #000 !important;
 	}
 }
+
