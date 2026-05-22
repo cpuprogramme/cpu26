@@ -1481,19 +1481,28 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
 	}
 }
 
+#search {
+	padding-top : 5.5em;
+}
 
 #searchbox {
 	display : flex;
 	position : relative;
+	& input {
+		flex : 1 0 auto;
+		border-radius : 0;
+	}
+	& button {
+		flex : 0 0 auto;
+		color: black;
+		background-color: #778f96;
+		border: 1px solid #5d757d;
+		border-radius : 0;
+		padding: .25em .5em;
+	}
 }
 
-#searchbox input {
-	flex : 1 0 auto;
-}
 
-#search {
-	padding-top : 5.5em;
-}
 
 
 
