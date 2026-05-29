@@ -70,6 +70,7 @@ body/*:root*/ {
 	--cpu-line-height : 1;
 	--background-neutral : #eee;
 	--background-sidebar : #ddd;
+	--background-item : #ccc;
 	--color-neutral : #222;
 	--background-img : url(/themes/cpu-15/img/bg_light.png);
 	--background-main : #fff;
@@ -111,6 +112,7 @@ body/*:root*/ {
 		--color-neutral : #ddd;
 		--background-neutral : #111;
 		--background-sidebar : #222;
+		--background-item : #333;
 		/*--background-img : url(/themes/cpu-15/img/bg_dark.png);*/
 		--background-img : url(/themes/cpu-26/img/background_graphy-dark.png);
 		--background-main : #000;
@@ -1249,12 +1251,7 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 }
 
 article.banner-article {
-	padding : 1em ;
-	background-color: red;
-
-	& > * {
-		background : gray
-	}
+	background : var(--background-item);
 
 	& > a:focus, & > a:hover {
 		background : var(--calque-out)
@@ -1282,6 +1279,11 @@ article.banner-article {
 
 .banner-article.full{
 	--illus-width : 400px;
+	padding : 1em ;
+	background-color: red;
+	& > * {
+		background : var(--background-item);
+	}
 }
 
 .banner-article.short{
@@ -1459,8 +1461,13 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
 	.flex-entries {
 		display : flex;
 		flex-wrap : wrap;
+		gap : 8px;
 		article {
-			width : 50%
+			flex : 0 1 calc(50% - 4px);
+			a {
+				padding-right : 1em;
+
+			}
 		}
 	}
 
