@@ -1299,6 +1299,9 @@ article.banner-article {
 }
 .banner-article.img-on-right .encloser {
 	flex-direction: row-reverse;
+	padding-right : 0;
+	padding-left : 1em;
+
 }
 
 
