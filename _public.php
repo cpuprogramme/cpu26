@@ -55,7 +55,14 @@ class CPU15_url extends dcUrlHandlers
 			self::p404();
 		}
 
-		$numero = str_pad(strval(intval($args, 10)), 4, '0', STR_PAD_LEFT);
+		$numero_number = intval($args, 10);
+
+		if ($numero_number < 1) {
+			# uncorrect number ?
+			self::p404();
+		}
+
+		$numero = str_pad(strval($numero_number), 4, '0', STR_PAD_LEFT);
 
 		dcCore::app()->blog->withoutPassword(false);
 		$params = new ArrayObject([
