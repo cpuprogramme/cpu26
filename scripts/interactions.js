@@ -26,7 +26,7 @@ let rotate_placeholder = {
 
 const texts = [
 
-    {s:0, e:0, t:`Une envie de pizza&nbsp;? <a href="https://cpu.dascritch.net/serie/Quelque%20chose%20de%20totalement%20diff%C3%A9rent">On a une émission sur le sujet</a>`},
+    {s:0, e:0, t:`Une envie de pizza&nbsp;? <a href="/serie/Quelque%20chose%20de%20totalement%20diff%C3%A9rent">On a une émission sur le sujet</a>`},
     {s:0, e:20, t:`Salut, ${navigator.platform}&nbsp;! Ton opérateur a l'air cool`},
     {s:0, e:20, t:`Attention&nbsp;: Certaines informations de ce site ne seraient pas sérieuses`},
     {s:21, e:23, t:`Ma vie est déprimante. Pourquoi tout le monde me hait&nbsp;?`},
@@ -35,9 +35,9 @@ const texts = [
     {s:140, e:200, t:`Je vois que votre navigateur n'est pas à jour, puis-je vous suggérer <a href="http://www.floodgap.com/retrotech/machten/mosaic/">Mosaic</a>&nbsp;?`},
     {s:200, e:233, t:`Astuce : pour effectuer une recherche, tapez des lettres afin d'écrire un mot dans ce champ puis appuyez <kbd>OK</kbd>`},
     {s:234, e:268, t:`À une époque, j'étais une star sur tous les tubes cathodiques de bureau.`},
-    {s:269, e:304, t:`Pour savoir quand sort notre prochaine <em lang="en">release</em>, <a href="https://cpu.dascritch.net/pages/Podcast">abonnez-vous à notre <em lang="en">podcast</em></a> ou à <a href="https://framalistes.org/sympa/info/cpu">notre <em lang="en">newsletter</em></a>`},
-    {s:304, e:342, t:`On aime bien <a href="https://cpu.dascritch.net/category/Programmes">les <em lang="en">releases</em></a> bien carrées ici…`},
-    {s:343, e:361, t:`<a href="https://www.radio-fmr.net">Radio &lt;FMR&gt;</a> est écoutable sur Toulouse en FM, <a href="https://cpu.dascritch.net/serie/Radio%20num%C3%A9rique">en DAB+</a> et partout où vous aurez du réseau.`},
+    {s:269, e:304, t:`Pour savoir quand sort notre prochaine <em lang="en">release</em>, <a href="/pages/Podcast">abonnez-vous à notre <em lang="en">podcast</em></a> ou à <a href="https://framalistes.org/sympa/info/cpu">notre <em lang="en">newsletter</em></a>`},
+    {s:304, e:342, t:`On aime bien <a href="/category/Programmes">les <em lang="en">releases</em></a> bien carrées ici…`},
+    {s:343, e:361, t:`<a href="https://www.radio-fmr.net">Radio &lt;FMR&gt;</a> est écoutable sur Toulouse en FM, <a href="/serie/Radio%20num%C3%A9rique">en DAB+</a> et partout où vous aurez du réseau.`},
     {s:362, e:413, t:`Saviez-vous qu\'on peut plier le papier pour faire des formes en 3D&nbsp;?<br />Cherchez <q>origami</q>… ah non.`},
     {s:414, e:434, t:`Je vois que vous vous ennuyez. Puis-je vous suggérer <a href="/?q=truc">une recherche quelconque</a>&nbsp;?`},
     {s:435, e:493, t:`Le saviez-vous ? En argot <q>creuser</q> se dit aussi <q>chercher</q>, soit <q>googler</q>. Ou sinon essayez cette touche <kbd>OK</kbd> !`},
@@ -95,7 +95,7 @@ function issue57() {
     Array.from(
         document.querySelector('.links [hreflang="xx-JS"]').closest('ul').querySelectorAll('li')
     ).forEach(each_li);
-    out += "\nEt n'hésitez pas → https://cpu.dascritch.net/pages/Prendre-contact-avec-nous";
+    out += `\nEt n'hésitez pas → https://${window.location.hostname}/pages/Prendre-contact-avec-nous`;
     console.info(out);
 }
 
