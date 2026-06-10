@@ -72,7 +72,7 @@ body/*:root*/ {
 	--background-sidebar : #ddd;
 	--background-item : #ccc;
 	--color-neutral : #222;
-	--background-img : url(/themes/cpu-15/img/bg_light.png);
+	--background-img : url(/themes/cpu-26/img/background_graphy-dark.png);
 	--background-main : #fff;
 	--background-comment : #eff;
 	--link : #D10000;
@@ -113,7 +113,6 @@ body/*:root*/ {
 		--background-neutral : #111;
 		--background-sidebar : #222;
 		--background-item : #333;
-		/*--background-img : url(/themes/cpu-15/img/bg_dark.png);*/
 		--background-img : url(/themes/cpu-26/img/background_graphy-dark.png);
 		--background-main : #000;
 		--background-comment : #122;
@@ -768,8 +767,6 @@ ul ul, ul ol, ol ol, ol ul {
 .category-current ul {
 	background-color: var(--color-neutral); }
 
-.sidebar li:hover ul {
-	background: url(/themes/cpu-15/img/bg_dark.png); }
 
 @media screen and (min-width: 40.1em) and (max-width: 80em) {
 
