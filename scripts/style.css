@@ -868,6 +868,7 @@ ul ul, ul ol, ol ol, ol ul {
 		width : 100%;
 		& h3 {
 			margin : 0 ;
+			width : 100% ;
 		}
 	}
 }
