@@ -91,7 +91,7 @@ body/*:root*/ {
 	--cpu-color : #ddd;
 	--cpu-playing-background : #444;
 	--cpu-playing-color : #fff;
-	--cpu-focus-background : transparent;
+	--cpu-focus-background : var(--link-focus);
 	--cpu-focus-color : #000;
 	--cpu-error-background : #a00 ;
 	--cpu-error-color : #ff7 ;
@@ -127,8 +127,6 @@ body/*:root*/ {
 		--cpu-color : #222;
 		--cpu-playing-background : transparent;
 		--cpu-playing-color : #111;
-		--cpu-focus-background : #000;
-		--cpu-focus-color : #fff;
 	}
 }
 
@@ -672,12 +670,14 @@ ul ul, ul ol, ol ol, ol ul {
 	text-shadow: var(--color-neutral) 0px -1px 0px; 
 	flex: 0 0 33%;
 	& a:link, & a:visited {
+		/** TODO use a global CSS var  **/
 		color: white;
 		border: none;
 	}
 	/* .sidebar .serie-current, */
 	& a:hover, & a:focus, & a:active,
 	& li:hover, & li:focus {
+		/** TODO use a global CSS var  **/
 		background-color: var(--link-side); 
 		text-decoration: none !important;
 	}
@@ -705,7 +705,6 @@ ul ul, ul ol, ol ol, ol ul {
 
 	& h3 {
 		text-transform: uppercase;
-
 	}
 
 	& h4 {
@@ -720,7 +719,7 @@ ul ul, ul ol, ol ol, ol ul {
 		& > ul {
 			list-style: none;
 			padding-left: 0; 
-			& li, & li {
+			& li {
 				list-style-image: none;
 				list-style-type: none;
 				margin-left: 0; 
@@ -915,9 +914,8 @@ ul ul, ul ol, ol ol, ol ul {
 
 .post-content {
 	margin : 0 auto 1em;
-
 	max-width: 42em;
-	 }
+}
 
 
 .post-attachments {
@@ -948,13 +946,15 @@ ul ul, ul ol, ol ol, ol ul {
 .post-feedback {
 	max-width: 42em;
 	margin: 3em auto;
-	clear: both; }
-
-.post-feedback h3 {
-	text-align: center;
-	font-size: 1.25em;
-	font-weight: bold;
-	color: var(--quote); }
+	clear: both; 
+	
+	h3 {
+		text-align: center;
+		font-size: 1.25em;
+		font-weight: bold;
+		color: var(--quote);
+	}
+}
 
 .comments-list {
 	list-style: none;
@@ -966,7 +966,7 @@ ul ul, ul ol, ol ol, ol ul {
 	}
 }
 
-.comment  {
+.comment {
 	overflow: hidden;
 	padding: .1em 1.5em .1em 4em;
 	margin-bottom: 2em;
@@ -999,16 +999,19 @@ ul ul, ul ol, ol ol, ol ul {
 
 	}
 
-.field label {
-	display: inline-block;
-	width: 10em; }
-
-.field input {
-	max-width: 100%; }
-
-.field textarea {
-	display: block;
-	width: 100%; }
+.field {
+	label {
+		display: inline-block;
+		width: 10em;
+	}
+	input {
+		max-width: 100%;
+	}
+	textarea {
+		display: block;
+		width: 100%;
+	}
+}
 
 .form-help, .remember {
 	font-size: 0.875em; }
@@ -1327,15 +1330,6 @@ article.banner-article {
 	/*backdrop-filter: blur(5px);*/
 }
 
-/*
-.banner-article:focus-within .calque {
-	background-color: var(--calque-out-within) !important;
-}
-
-.banner-article a:hover {
-	background-color: var(--calque-out) !important;
-}
-*/
 
 .no-images img { display : none }
 
@@ -1379,12 +1373,15 @@ audio {
 	border-radius:0.5em;
 } 
 
-ul.tags li {
-	border: 1px solid #777;
+ul.tags {
+	li {
+		border: 1px solid #777;
+	}
 }
 
 ul.tags li:hover, ul.tags li:active, ul.tags li .tag:focus,
 ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
+	/** TODO , utiliser une CSS var pour simpliefr le code **/
 	background : red;
 	color : white;
 }
