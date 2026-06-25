@@ -1350,15 +1350,18 @@ audio {
 
 /*** SPECIFIC DSN 15 **/
 
-.blognav__widgets li, .blogextra__widgets li {
+.blognav__widgets, .blogextra__widgets {
+	li {
 		display: flex;
 		padding: 0;
+		ul {
+			margin-left: 0;
+			padding: 0;
+		}
+	}
 }
 
-.blognav__widgets li ul, .blogextra__widgets li ul {
-		margin-left: 0;
-		padding: 0;
-}
+
 
 .sidebar a:link, .sidebar a:visited {
 	flex: auto;
@@ -1391,22 +1394,20 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
 	display : flex;
 	list-style: none;
 	padding : 0;
+
+	li {
+		list-style: none;
+		padding : 0 5px;
+		flex : 0 1 auto;
+	}
+	li:first-child {
+		padding-left : 0px;
+	}
+	li:last-child {
+		padding-right : 0px;
+	}
 }
 
-.breadcrumb li {
-	list-style: none;
-	
-	padding : 0 5px;
-	flex : 0 1 auto;
-}
-
-.breadcrumb li:first-child {
-	padding-left : 0px;
-}
-
-.breadcrumb li:last-child {
-	padding-right : 0px;
-}
 
 .breadcrumb_categories:not(:first-child) {
 	display: none;
