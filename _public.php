@@ -9,15 +9,18 @@
 #
 # -- END LICENSE BLOCK -----------------------------------------
 
+
+use Dotclear\App;
+
 if (!defined('DC_RC_PATH')) { return; }
 
-l10n::set(dirname(__FILE__).'/locales/'.dcCore::app()->lang.'/main');
+l10n::set(dirname(__FILE__).'/locales/'.App::lang()->getLang().'/main');
 
 
 
 # Access to twitter-player
-\Dotclear\App::url()->register('twitterplayer', 'm', '^twitter-player(?:/(.+))?$', ['CPU15_url', 'twitterplayer']);
-\Dotclear\App::url()->register('showshortcut', 'ex', '^([0-9]{1,4})$', ['CPU15_url', 'showshortcut']);
+App::url()->register('twitterplayer', 'm', '^twitter-player(?:/(.+))?$', ['CPU15_url', 'twitterplayer']);
+App::url()->register('showshortcut', 'ex', '^([0-9]{1,4})$', ['CPU15_url', 'showshortcut']);
 
 
 
@@ -31,12 +34,12 @@ class CPU15_url extends Dotclear\Core\Frontend\Url
 			self::p404();
 		}
 
-		dcCore::app()->blog->withoutPassword(false);
+		App::blog()->withoutPassword(false);
 		$params = new ArrayObject([ 'post_url' => $args ]);
-		dcCore::app()->callBehavior('publicPostBeforeGetPosts',$params,$args);
+		App::behavior()->callBehavior('publicPostBeforeGetPosts',$params,$args);
 
-		dcCore::app()->ctx->posts = dcCore::app()->blog->getPosts($params);
-		if (dcCore::app()->ctx->posts->isEmpty()) {
+		App::frontend()->context()->posts = App::blog()->getPosts($params);
+		if (App::frontend()->context()->posts->isEmpty()) {
 			# The specified entry does not exist.
 			self::p404();
 		}
@@ -59,7 +62,7 @@ class CPU15_url extends Dotclear\Core\Frontend\Url
 
 		$numero = str_pad(strval($numero_number), 4, '0', STR_PAD_LEFT);
 
-		dcCore::app()->blog->withoutPassword(false);
+		App::blog()->withoutPassword(false);
 		$params = new ArrayObject([
 			'post_status' 	=> 1, 		# published
 			'post_type'		=> 'post',
@@ -67,7 +70,7 @@ class CPU15_url extends Dotclear\Core\Frontend\Url
 			'sql' 			=> ' and ( "post_title" like \'Ex'.$numero.'%\' )'
 
 		]);
-		$post = dcCore::app()->blog->getPosts($params);
+		$post = App::blog()->getPosts($params);
 		if ($post->isEmpty()) {
 			# The specified entry does not exist.
 			self::p404();

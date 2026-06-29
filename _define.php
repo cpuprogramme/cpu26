@@ -11,6 +11,7 @@
 
 if (!defined('DC_RC_PATH')) { return; }
 
+
 $this->registerModule(
 	/* Name */				"CPU 2026",
 	/* Description*/		"D'après le thème Berlin, par défaut de Dotclear 2.38",
@@ -21,6 +22,12 @@ $this->registerModule(
 								'requires' => [['core', '2.38']],
 								# Widget rendering
 								'widgetcontainerformat' => '<details class="%1$s" %2$s>%3$s</details>',
-								'widgettitleformat' => '<summary><h3>%s</h3></summary>', # Needed to force widgets to use h3 
+								'widgettitleformat' => '<summary><h3>%s</h3></summary>' # Needed to force widgets to use h3 
+/*
+        'widgettitleformat'     => '', // formatage de widget (optionnel)
+        'widgetsubtitleformat'  => '', // formatage de widget (optionnel)
+        'widgetcontainerformat' => '', // formatage de widget (optionnel)
+        */
+
 							]
 );

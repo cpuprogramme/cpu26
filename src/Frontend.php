@@ -4,11 +4,13 @@
 
 namespace Dotclear\Theme\cpu26;
 
-use dcCore;
+use Dotclear\App;
 use Dotclear\Core\Process;
 
 class Frontend extends Process
 {
+
+
 	public static function init(): bool
 	{
 		return self::status(My::checkContext(My::FRONTEND));
@@ -16,6 +18,7 @@ class Frontend extends Process
 
 	public static function process(): bool
 	{
+
 		if (!self::status()) {
 			return false;
 		}
@@ -28,7 +31,7 @@ class Frontend extends Process
 			'EpisodeCountReset',
 
 		] as $template) {
-			dcCore::app()->tpl->addValue($template,	[FrontendTemplate::class,$template]);
+			App::frontend()->template()->addValue($template,	[FrontendTemplate::class,$template]);
 		}
 
 		foreach ([
@@ -37,7 +40,7 @@ class Frontend extends Process
 			'SeriesNotLostAndFound',
 			'EpisodeCountLowerThan'
 		] as $template) {
-			dcCore::app()->tpl->addBlock($template,	[FrontendTemplate::class,$template]);
+			App::frontend()->template()->addBlock($template,	[FrontendTemplate::class,$template]);
 		}
 
 
