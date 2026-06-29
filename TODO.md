@@ -6,7 +6,7 @@ TODO
  	- passer les CSS en nested notation
  - Mettre les images en vignette plutôt qu'en background
  - Reconstruire le layout depuis la une
- - Supprimer les références d'URL cpu15 en cpu-26
+ - Supprimer les références d'URL cpu-15 en cpu26
  - utiliser le même background que le liseret pour le player ?
  - simplifier visuellement la sidebar de la navigation. `<details>` ?
  - passer le formulaire de commentaires en `<details>`

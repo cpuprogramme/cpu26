@@ -6,8 +6,8 @@
 	font-style: normal;
 	font-weight: 400;
 	src: local('Roboto Condensed'), local('RobotoCondensed-Regular'),
-	url(/themes/cpu-26/fonts/RobotoCondensed-Regular.woff2) format('woff2'),
-	url(/themes/cpu-26/fonts/RobotoCondensed-Regular.ttf) format('truetype');
+	url(/themes/cpu26/fonts/RobotoCondensed-Regular.woff2) format('woff2'),
+	url(/themes/cpu26/fonts/RobotoCondensed-Regular.ttf) format('truetype');
 	font-display : fallback;
 }
 @font-face {
@@ -15,8 +15,8 @@
 	font-style: normal;
 	font-weight: 700;
 	src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'),
-	url(/themes/cpu-26/fonts/RobotoCondensed-Bold.woff2) format('woff2'),
-	url(/themes/cpu-26/fonts/RobotoCondensed-Bold.ttf) format('truetype');
+	url(/themes/cpu26/fonts/RobotoCondensed-Bold.woff2) format('woff2'),
+	url(/themes/cpu26/fonts/RobotoCondensed-Bold.ttf) format('truetype');
 	font-display : fallback;
 }
 @font-face {
@@ -24,8 +24,8 @@
 	font-style: italic;                                            
 	font-weight: 400;                                              
 	src: local('Roboto Condensed Italic'), local('RobotoCondensed-Italic'),
-	url(/themes/cpu-26/fonts/RobotoCondensed-Italic.woff2) format('woff2'),
-	url(/themes/cpu-26/fonts/RobotoCondensed-Italic.ttf) format('truetype');
+	url(/themes/cpu26/fonts/RobotoCondensed-Italic.woff2) format('woff2'),
+	url(/themes/cpu26/fonts/RobotoCondensed-Italic.ttf) format('truetype');
 	font-display : fallback;
 }
 
@@ -34,8 +34,8 @@
 	font-style: italic;
 	font-weight: 700;
 	src: local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'),
-	url(/themes/cpu-26/fonts/RobotoCondensed-BoldItalic.woff2) format('woff2'),
-	url(/themes/cpu-26/fonts/RobotoCondensed-BoldItalic.ttf) format('truetype');
+	url(/themes/cpu26/fonts/RobotoCondensed-BoldItalic.woff2) format('woff2'),
+	url(/themes/cpu26/fonts/RobotoCondensed-BoldItalic.ttf) format('truetype');
 	font-display : fallback;
 }
 
@@ -72,7 +72,7 @@ body/*:root*/ {
 	--background-sidebar : #ddd;
 	--background-item : #ccc;
 	--color-neutral : #222;
-	--background-img : url(/themes/cpu-26/img/background_graphy-dark.png);
+	--background-img : url(/themes/cpu26/img/background_graphy-dark.png);
 	--background-main : #fff;
 	--background-comment : #eff;
 	--link : #D10000;
@@ -113,7 +113,7 @@ body/*:root*/ {
 		--background-neutral : #111;
 		--background-sidebar : #222;
 		--background-item : #333;
-		--background-img : url(/themes/cpu-26/img/background_graphy-dark.png);
+		--background-img : url(/themes/cpu26/img/background_graphy-dark.png);
 		--background-main : #000;
 		--background-comment : #122;
 		--link : #F1CB29;

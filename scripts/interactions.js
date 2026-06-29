@@ -102,7 +102,7 @@ function issue57() {
 function assistant() {
         const search_element = document.querySelector('input[type="search"]');
         // pour éviter le chargement très lourd de l'image d'entrée
-        search_element.insertAdjacentHTML('beforebegin','<div id="bulle"></div><img src="/themes/cpu-26/clippy.png" id="clippy" alt="" />');
+        search_element.insertAdjacentHTML('beforebegin','<div id="bulle"></div><img src="/themes/cpu26/clippy.png" id="clippy" alt="" />');
 
         const bulle_element = document.querySelector('#bulle');
         const clippy_element = document.querySelector('#clippy');
