@@ -8,6 +8,9 @@
 	<tpl:Entries lastn="1" category="Programmes ?sub" no_context="1">
 		<tpl:Attachments>
 			<tpl:AttachmentIf is_mp3="1">
+				<tpl:HasChapterfFile>
+					<link rel="preload" as="track" href="{{tpl:ChapterFile}}" />
+				</tpl:HasChapterfFile>
 				<link rel="preload" as="track" href="{{tpl:ChapterFile}}" />
 			</tpl:AttachmentIf>
 		</tpl:Attachments>
