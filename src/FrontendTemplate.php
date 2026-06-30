@@ -88,4 +88,22 @@ class FrontendTemplate
 			'<?php if (App::frontend()->context()->meta->meta_id != "lost and found") { ?>' . $content . '<?php }  ?>';
 
 	}
+
+	public static function EntryCategoryColorClass($attr) {
+		return '<?php
+			error_log("category :: ".App::frontend()->context()->posts->cat_url);
+			switch (App::frontend()->context()->posts->cat_url) {
+				case "Programmes": 
+					echo "fond_rouge";
+					break;
+				case "Interviewes": 
+					echo "fond_orange";
+					break;
+				default:
+					if (str_starts_with(App::frontend()->context()->posts->cat_url,"Chroniques")) {
+						echo "fond_jaune";
+					}
+			}
+		?>';
+	}
 }

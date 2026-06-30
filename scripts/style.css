@@ -83,6 +83,14 @@ body/*:root*/ {
 	--calque-out-within : #ffffffbb;
 	--calque-out : white;
 	--illus-width : 200px;
+
+
+	--fond-bleu : #009EDA;
+	--fond-vert : #4BB249;
+	--fond-jaune : #F1CB29;
+	--fond-orange : #DA6241;
+	--fond-rouge: #D12625;
+
 	/*--cpu-focus-color : #111;*/
 
 	--cpu-height : 64px;
@@ -1231,19 +1239,19 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 
 
 .fond_bleu {
-	background : #009EDA;
+	background : var(--fond-bleu);
 }
 .fond_vert {
-	background : #4BB249;
+	background : var(--fond-vert);
 }
 .fond_jaune {
-	background : #F1CB29;
+	background : var(--fond-jaune);
 }
 .fond_orange {
-	background : #DA6241;
+	background : var(--fond-orange);
 }
 .fond_rouge {
-	background : #D12625;
+	background : var(--fond-rouge);
 }
 
 

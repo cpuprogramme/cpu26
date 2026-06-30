@@ -29,6 +29,7 @@ class Frontend extends Process
 			'CountEntriesInSeries',
 			'EpisodeNumber',
 			'EpisodeCountReset',
+			'EntryCategoryColorClass',
 
 		] as $template) {
 			App::frontend()->template()->addValue($template,	[FrontendTemplate::class,$template]);

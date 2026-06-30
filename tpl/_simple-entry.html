@@ -1,43 +1,47 @@
 <article class="post simple" id="p{{tpl:EntryID}}" role="article">
-	<div class="full banner-article" style="background-image:url({{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}})">
-		<h2 class="post-title"><span class="calque">{{tpl:EntryTitle encode_html="1"}}</span></h2>
 
-		<div class="post-meta">
-			<p class="post-info">
-				<span class="calque">
-					<span class="post-date">{{tpl:EntryDate}}. </span>
-					<tpl:EntryIf has_category="1">
-						<span class="post-cat"><tpl:EntryCategoriesBreadcrumb><a
-						href="{{tpl:CategoryURL}}">{{tpl:CategoryTitle encode_html="1"}}</a> › </tpl:EntryCategoriesBreadcrumb><a
-						href="{{tpl:EntryCategoryURL}}">{{tpl:EntryCategory encode_html="1"}}</a></span>
-					</tpl:EntryIf>
+	<header class="full banner-article {{tpl:EntryCategoryColorClass}}">
+		<div class="encloser">
+			{{tpl:include src="_entry-illustration.html"}}
 
-					<tpl:EntrySeries>
-						› <a href="{{tpl:SerieURL}}">série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a>
-					</tpl:EntrySeries>
-				</span>
-			</p>
+			<div class="calque">
+				<h2 class="post-title"><span class="calque">{{tpl:EntryTitle encode_html="1"}}</span></h2>
 
-			<tpl:EntryTags>
-				<tpl:TagsHeader>
-					<ul class="post-tags-list">
-				</tpl:TagsHeader>
-					<li class="post-tags-item calque"><a href="{{tpl:TagURL}}">{{tpl:TagID}}</a></li>
-				<tpl:TagsFooter>
-					</ul>
-				</tpl:TagsFooter>
-			</tpl:EntryTags>
+				<p class="post-info">
+							<span class="post-date">{{tpl:EntryDate}}. </span>
+						<tpl:EntryIf has_category="1">
+							<span class="post-cat"><tpl:EntryCategoriesBreadcrumb><a
+							href="{{tpl:CategoryURL}}">{{tpl:CategoryTitle encode_html="1"}}</a> › </tpl:EntryCategoriesBreadcrumb><a
+							href="{{tpl:EntryCategoryURL}}">{{tpl:EntryCategory encode_html="1"}}</a></span>
+						</tpl:EntryIf>
+
+						<tpl:EntrySeries>
+							› <a href="{{tpl:SerieURL}}">série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a>
+						</tpl:EntrySeries>
+				</p>
+
+				<tpl:EntryTags>
+					<tpl:TagsHeader>
+						<ul class="post-tags-list">
+					</tpl:TagsHeader>
+						<li class="post-tags-item calque"><a href="{{tpl:TagURL}}">{{tpl:TagID}}</a></li>
+					<tpl:TagsFooter>
+						</ul>
+					</tpl:TagsFooter>
+				</tpl:EntryTags>
+
 		</div>
 
 		<!-- # --BEHAVIOR-- publicEntryBeforeContent -->
 		{{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
 		
-		<tpl:Attachments>
-			<tpl:AttachmentIf is_mp3="1">
-				{{tpl:include src="_mp3_player.html"}}
-			</tpl:AttachmentIf>
-		</tpl:Attachments>
 	</div>
+	<tpl:Attachments>
+		<tpl:AttachmentIf is_mp3="1">
+			{{tpl:include src="_mp3_player.html"}}
+		</tpl:AttachmentIf>
+	</tpl:Attachments>
+</header>
 		
 	<div class="post-content">{{tpl:EntryContent}}</div>
 
@@ -45,7 +49,7 @@
 	{{tpl:SysBehavior behavior="publicEntryAfterContent"}}
 
 
-<!-- # Attachments -->
+
 <tpl:Attachments>
 	<tpl:AttachmentsHeader>
 	<h3 id="pieces_jointes" class="notsobig">Pièces jointes</h3>
@@ -60,6 +64,7 @@
 		</div>
 	</tpl:AttachmentsFooter>
 </tpl:Attachments>
+
 </article>
 
 <tpl:EntrySeries>

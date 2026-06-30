@@ -1,4 +1,4 @@
-<article id="p{{tpl:EntryID}}" class="post {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} full banner-article" role="article">
+<article id="p{{tpl:EntryID}}" class="post {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} full banner-article fond_rouge" role="article">
 
 	<a class="encloser" href="{{tpl:EntryURL}}">
 		{{tpl:include src="_entry-illustration.html"}}
@@ -30,7 +30,7 @@
 		</div>
 	</a>
 
-	<tpl:EntryIf operator="or" show_comments="1" show_pings="1" has_attachment="1">
+	<tpl:EntryIf has_attachment="1">
 		<tpl:Attachments>
 			<tpl:AttachmentIf is_mp3="1">
 				{{tpl:include src="_mp3_player_chapters.html"}}
