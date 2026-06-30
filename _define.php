@@ -19,10 +19,14 @@ $this->registerModule(
 	/* Version */			'2.0',
 	/* Properties */		[
 								'type' => 'theme',
-								'requires' => [['core', '2.38']],
+								'requires' => [
+									['core', '2.38'],
+									// ['cpuAudioPublic', '3.1'] // n'arrive ps à le détecter ??? du coup désactive systématiquement le thème
+								],
 								# Widget rendering
 								'widgetcontainerformat' => '<details class="%1$s" %2$s>%3$s</details>',
-								'widgettitleformat' => '<summary><h3>%s</h3></summary>' # Needed to force widgets to use h3 
+								'widgettitleformat' => '<summary><h3>%s</h3></summary>', # Needed to force widgets to use h3 
+								'widgetsubtitleformat'  => '<summary><h3>%s</h3></summary>',
 /*
         'widgettitleformat'     => '', // formatage de widget (optionnel)
         'widgetsubtitleformat'  => '', // formatage de widget (optionnel)
