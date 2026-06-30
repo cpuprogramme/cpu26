@@ -48,7 +48,7 @@
 
 @media (max-width: 640px) {
 	:root , .interface {
-		--cpu-font-size : 13px;
+		/*--cpu-font-size : 13px;*/
 		--cpu-height : 48px;
 		--cpu-elapse-width : 140px;
 		--cpu-min-padding : 4px;
@@ -66,7 +66,7 @@ body/*:root*/ {
 	scroll-margin: 100px;
 	color-scheme: light dark;
 	--cpu-font-family : "Roboto Condensed", Lato, "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-	--cpu-font-size : 16px; /* should be inverted  */
+	/*--cpu-font-size : 16px;*/ /* should be inverted  */
 	--cpu-line-height : 1;
 	--background-neutral : #eee;
 	--background-sidebar : #ddd;
@@ -77,7 +77,8 @@ body/*:root*/ {
 	--background-comment : #eff;
 	--link : #D10000;
 	--link-focus : #f9f9f9;
-	--link-side : #ee0f0f;
+	--link-side : black;
+	--background-link-side : #11f0f0;
 	--quote : #626262;
 	--calque-bg : #ffffff77;
 	--calque-out-within : #ffffffbb;
@@ -95,23 +96,24 @@ body/*:root*/ {
 
 	--cpu-height : 64px;
 	--cpu-font-small-size : calc(var(--cpu-font-size) * 0.8);
-	--cpu-background : transparent;
-	--cpu-color : #ddd;
-	--cpu-playing-background : #444;
-	--cpu-playing-color : #fff;
-	--cpu-focus-background : var(--link-focus);
-	--cpu-focus-color : #000;
-	--cpu-error-background : #a00 ;
-	--cpu-error-color : #ff7 ;
-	--cpu-popup-background : #aaa;
-	--cpu-popup-color : #333;
-	--cpu-cue : #000;
-	--cpu-timeline-limits : #f00;
 	--cpu-elapse-width : 160px;
 	--cpu-min-padding : 16px;
 	--cpu-inner-shadow : inset 0px 5px 10px -5px black;
 	--cpu-color-transitions : 0s;
 	--cpu-background-transitions : 0s;
+
+	--cpu-background : transparent;
+	--cpu-color : var(--link);
+	--cpu-playing-background : var(--background-sidebar);
+	--cpu-playing-color : var(--link-focus);
+	--cpu-focus-background : var(--background-item);
+	--cpu-focus-color : var(--link-focus);
+	--cpu-error-background : #a00 ;
+	--cpu-error-color : #ff7 ;
+	--cpu-popup-background : var(--link-focus);
+	--cpu-popup-color : var(--background-sidebar);
+	--cpu-cue : var(--link);
+	--cpu-timeline-limits : #f00;
 	/* --cpu-unfold : 0s; not actived */
 }
 
@@ -126,15 +128,18 @@ body/*:root*/ {
 		--background-comment : #122;
 		--link : #F1CB29;
 		--link-focus : #eee;
+		--background-link-side : #ee0f0f;
+		--link-side : white;
 		--quote : #666;
 		--calque-bg : #00000077;
 		--calque-out-within : #000000bb;
 		--calque-out : black;
-
+		/*
 		--cpu-background : transparent;
 		--cpu-color : #222;
 		--cpu-playing-background : transparent;
 		--cpu-playing-color : #111;
+		*/
 	}
 }
 
@@ -484,24 +489,24 @@ ul ul, ul ol, ol ol, ol ul {
 	padding-right: .5em; }
 
 /*.post-date {
-	background-image: url(/themes/cpu-15/img/icon_date.png); } */
+	background-image: url(/themes/cpu26/img/icon_date.png); } */
 
 .post-cat {
-	background-image: url(/themes/cpu-15/img/icon_category.png); }
+	background-image: url(/themes/cpu26/img/icon_category.png); }
 
 .post-tags-list {
-	background-image: url(/themes/cpu-15/img/icon_tags.png);
+	background-image: url(/themes/cpu26/img/icon_tags.png);
 	padding-left: 22px !important; }
 
 /*
 .comment_count {
-	background-image: url(/themes/cpu-15/img/icon_comments.png); }
+	background-image: url(/themes/cpu26/img/icon_comments.png); }
 
 .attach_count {
-	background-image: url(/themes/cpu-15/img/icon_attach.png); }
+	background-image: url(/themes/cpu26/img/icon_attach.png); }
 
 .post-permalink {
-	background-image: url(/themes/cpu-15/img/icon_permalink.png); }*/
+	background-image: url(/themes/cpu26/img/icon_permalink.png); }*/
 
 /** --------------------------------------------------
 		layout elements
@@ -674,7 +679,7 @@ ul ul, ul ol, ol ol, ol ul {
 .sidebar {
 	padding-top: 2em;
 	background: var(--background-sidebar) /*url(var(--background-img))*/;
-	color: white;
+	color: var(--link-side);
 	text-shadow: var(--color-neutral) 0px -1px 0px; 
 	flex: 0 0 33%;
 	& a:link, & a:visited {
@@ -686,7 +691,7 @@ ul ul, ul ol, ol ol, ol ul {
 	& a:hover, & a:focus, & a:active,
 	& li:hover, & li:focus {
 		/** TODO use a global CSS var  **/
-		background-color: var(--link-side); 
+		background-color: var(--background-link-side); 
 		text-decoration: none !important;
 	}
 }
@@ -933,8 +938,8 @@ ul ul, ul ol, ol ol, ol ul {
 	box-shadow: 0 2px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.2); }
 
 .post-attachments:before {
-	content: url(/themes/cpu-15/img/icon_attachments.png);
-	content: url(/themes/cpu-15/img/icon_attachments.svg);
+	content: url(/themes/cpu26/img/icon_attachments.png);
+	content: url(/themes/cpu26/img/icon_attachments.svg);
 	display: block;
 	position: absolute;
 	margin-top: -.33em;
@@ -1191,11 +1196,11 @@ menu, menu ul {
 
 
 #ondemiroir_domain {
-		flex: 1 1 auto;
-		height : 64px;
-		font-size : 3em;
-		position : relative;
-		overflow : hidden;
+	flex: 1 1 auto;
+	height : 64px;
+	font-size : 3em;
+	position : relative;
+	overflow : hidden;
 }
 
 
@@ -1205,10 +1210,6 @@ menu, menu ul {
 	left : 0;
 	width : 100%;
 	height : 64px;
-	/*
-	--cpu-background : #555;
-	--cpu-playing-background : #555;
-	*/
 }
 
 #motto {
@@ -1259,11 +1260,16 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 	color : black;
 }
 
-article.banner-article {
+.banner-article {
+	/*
 	background : var(--background-item);
+	*/
+	& > * {
+		background : var(--background-item);
+	}
 
 	& > a:focus, & > a:hover {
-		background : var(--calque-out)
+		background : var(--calque-out);
 	}
 
 	& .encloser {
@@ -1278,8 +1284,8 @@ article.banner-article {
 
 	& picture {
 		& img {
-			width : var(--illus-width);
-			height : var(--illus-width);
+			width :  min( var(--illus-width), 100% );
+			height : min( var(--illus-width), 100% );
 			aspect-ratio: 1 / 1;
 			display : grid; /* nécessiare pour virer le comportement inline */
 		}
@@ -1289,11 +1295,15 @@ article.banner-article {
 .banner-article.full{
 	--illus-width : 400px;
 	padding : 1em ;
-	background-color: red;
+	/*  mis via la classe dans l'appel, rapport à la catégorie du post  background-color: var(--fond-rouge);*/
 	& > * {
 		background : var(--background-item);
 	}
 }
+.banner-article.full:has(:playing) {
+	background-color: red; /* rouge antenne, forcément */
+}
+
 
 .banner-article.short{
 	--illus-width : 200px;
@@ -1322,7 +1332,6 @@ article.banner-article {
 	top: 5px;
 	left: -5px;
 	z-index: -1;
-	background-color: var(--color-neutral);
 }
 
 
@@ -1349,8 +1358,8 @@ audio {
 
 
 @media screen and (max-width: 50em) {
-		#ondemiroir_domain {
-		 font-size: 1.5em;
+	#ondemiroir_domain {
+		font-size: 1.5em;
 	}
 
 }
@@ -1369,12 +1378,13 @@ audio {
 	}
 }
 
-
-
 .sidebar a:link, .sidebar a:visited {
 	flex: auto;
 	padding: 0.25em;
 }
+
+/*
+Semble ne plus être utilisé, c'était exclusivement pour la liste de tgas dans la sidebar
 
 .tags li {
 	display : inline-block;
@@ -1390,13 +1400,15 @@ ul.tags {
 	}
 }
 
-ul.tags li:hover, ul.tags li:active, ul.tags li .tag:focus,
-ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
-	/** TODO , utiliser une CSS var pour simpliefr le code **/
-	background : red;
-	color : white;
-}
+ul.tags {
 
+	li:hover, li:active, li .tag:focus, li a:hover, li a:active, li .tag a:focus {
+		/ ** TODO , utiliser une CSS var pour simpliefr le code ** /
+		background : red;
+		color : white;
+	}	
+} 
+*/
 
 .breadcrumb {
 	display : flex;
@@ -1443,6 +1455,10 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
 
 @media screen and (max-width: 40em) {
 
+	body {
+		--illus-width : 50px;
+	}
+
 	.only-small {
 		display : inline;
 	}
@@ -1454,17 +1470,20 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
 	}
 }
 
+/*
 .dc-page .post-date  {
 	display : none;
 }
 
-.dc-page .banner-article {
-	background : none;
-	padding-top : 0px;
+*/
+.dc-page .encloser {
+	display : block;
+	h2 {
+		margin-bottom : 0
+	}
 }
 
-
-@media (min-width: 40em) {
+@media (min-width: 40.1em) {
 	.flex-entries {
 		display : flex;
 		flex-wrap : wrap;
@@ -1491,6 +1510,12 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
 		margin : 2px;
 	}
 
+}
+
+@media screen and (max-width: 80em) {
+	body {
+		--illus-width : 150px;
+	}
 }
 
 @media screen and (min-width: 80.1em) {
