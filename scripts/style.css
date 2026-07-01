@@ -1288,6 +1288,7 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 	}
 
 	& picture {
+		flex : 1 0 var(--illus-width);
 		& img {
 			width :  min( var(--illus-width), 100% );
 			height : min( var(--illus-width), 100% );
