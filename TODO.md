@@ -6,9 +6,10 @@ TODO
  - moderniser 
  	- en light-dark() sqi on peut garder le mode contraste fort
  	- passer les CSS en nested notation
+ - regrouper, simplifier les règles @media
+ - refaire la liste des catégories sidebar, pour inclure la sous catégorie Chroniques
  - Mettre les images en vignette plutôt qu'en background
  - Reconstruire le layout depuis la une
- - simplifier visuellement la sidebar de la navigation. `<details>` ?
  - passer le formulaire de commentaires en `<details>`
  - virer .calque ?
  - tester avec une page info en une
