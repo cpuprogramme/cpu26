@@ -1626,9 +1626,6 @@ figure, figure iframe, figure img {
 	text-align : center;
 }
 
-cpu-audio {
-	/*backdrop-filter: blur(5px);*/
-}
 
 @media (prefers-contrast: more) {
 	body, #main, #motto, #header-control {
