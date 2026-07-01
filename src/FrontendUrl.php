@@ -1,34 +1,27 @@
 <?php
-# -- BEGIN LICENSE BLOCK ---------------------------------------
-# This file is part of Ductile, a theme for Dotclear
-#
-# Copyright (c) 2011 - Association Dotclear
-# Licensed under the GPL version 2.0 license.
-# See LICENSE file or
-# http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-#
-# -- END LICENSE BLOCK -----------------------------------------
 
+/**
+ * @package     Dotclear
+ *
+ * @copyright   Olivier Meunier & Association Dotclear
+ * @copyright   AGPL-3.0
+ */
+declare(strict_types=1);
+
+namespace Dotclear\Theme\cpu26;
 
 use Dotclear\App;
+use Dotclear\Core\Url;
+use ArrayObject;
 
-if (!defined('DC_RC_PATH')) { return; }
-
-l10n::set(dirname(__FILE__).'/locales/'.App::lang()->getLang().'/main');
-
-
-
-# Access to twitter-player
-App::url()->register('twitterplayer', 'm', '^twitter-player(?:/(.+))?$', ['CPU15_url', 'twitterplayer']);
-App::url()->register('showshortcut', 'ex', '^([0-9]{1,4})$', ['CPU15_url', 'showshortcut']);
-
-
-
-## TODO modifier dcUrlHandlers vers Dotclear\Core\Frontend\Url
-class CPU15_url extends Dotclear\Core\Frontend\Url
+/**
+ * @brief   The module frontend URL.
+ * @ingroup tags
+ */
+class FrontendUrl extends Url
 {
 
-	public static function twitterplayer($args) {
+	public static function TwitterPlayer(?string $args): void {
 		if ($args === '') {
 			# No entry was specified.
 			self::p404();
@@ -47,7 +40,7 @@ class CPU15_url extends Dotclear\Core\Frontend\Url
 		self::serveDocument('twitter-player.html');
 	}	
 
-	public static function showshortcut($args) {
+	public static function ShowShortcut(?string $args): void  {
 		if ($args === '') {
 			# No entry was specified.
 			self::p404();
