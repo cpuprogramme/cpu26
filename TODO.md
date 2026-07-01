@@ -1,10 +1,13 @@
+DONE
+----
+ - passer en dotclear moderne
+ - virer l'autoplay du cpu-audio : trop pénible. 
+
 TODO
 ----
 
  - résoudre le problème des file_url doublés et avoir le $attach_f accessible pour cpuAudioPublic
- 
- - moderniser 
- 	- en light-dark() sqi on peut garder le mode contraste fort
+  - moderniser 
  	- passer les CSS en nested notation
  - regrouper, simplifier les règles @media
  - refaire la liste des catégories sidebar, pour inclure la sous catégorie Chroniques
@@ -18,7 +21,6 @@ TODO
  - Animer le liseret détachant les blocs header audio
  - Ajouter des images de fond (uniquement sur écrans larges)
  	- avec un effet css parallax 
- - virer l'autoplay du cpu-audio : trop pénible. 
  - restyliser le champ recherche avec la couleur recherche
  - restyliser le header de résultat de recherche avec la couleurw
 
@@ -29,5 +31,10 @@ Vérifier sur :
 
 
 
- Bugs dotclear notés : 
-  - https://codeberg.org/Dotclear/dotclear/issues/164 `widgetcontainerformat` n'est jamais exploitée.
+Bugs dotclear notés : 
+ - https://codeberg.org/Dotclear/dotclear/issues/164 `widgetcontainerformat` n'est jamais exploitée.
+ - https://codeberg.org/Dotclear/dotclear/issues/165 Pouvoir ré-accéder aux variables front `$attach_f` et `$attach_i` 
+ - url `/tags` n'est plus là
+
+Autres bugs notés :
+ - Pas possible d'upgrader la css avec `light-dark()` car les webcomponents restent en light-mode
