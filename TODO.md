@@ -19,7 +19,7 @@ TODO
  - vérifier que `issue57()` dans le code javascript marche toujours
  - Animer le liseret détachant les blocs header audio
  - Ajouter des images de fond (uniquement sur écrans larges)
- 	- avec un effet css parallax 
+ 	- avec un effet css parallax ? https://css-tricks.com/bringing-back-parallax-with-scroll-driven-css-animations/
  - restyliser le champ recherche avec la couleur recherche
  - restyliser le header de résultat de recherche avec la couleurw
 
