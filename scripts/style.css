@@ -1269,6 +1269,12 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 	/*
 	background : var(--background-item);
 	*/
+	padding : 1em ;
+	/*  mis via la classe dans l'appel, rapport à la catégorie du post  background-color: var(--fond-rouge);*/
+	& > * {
+		background : var(--background-item);
+	}
+
 	& > * {
 		background : var(--background-item);
 	}
@@ -1288,7 +1294,7 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 	}
 
 	& picture {
-		flex : 1 0 var(--illus-width);
+		flex : 0 0 var(--illus-width);
 		& img {
 			width :  min( var(--illus-width), 100% );
 			height : min( var(--illus-width), 100% );
@@ -1298,25 +1304,29 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 	}
 }
 
-.banner-article.full{
-	--illus-width : 400px;
-	padding : 1em ;
-	/*  mis via la classe dans l'appel, rapport à la catégorie du post  background-color: var(--fond-rouge);*/
-	& > * {
-		background : var(--background-item);
-	}
+.banner-article.minimal {
+	padding : 0em;
+
 }
-.banner-article.full:has(:playing) {
+.posts-listed:not(:first-child) {
+	padding-top: 0em;
+}
+
+.banner-article.full{
+	/*--illus-width : calc(var(--illus-width) * 2);*/
+	--illus-width : 400px;	
+}
+.banner-article:has(:playing) {
 	background-color: red; /* rouge antenne, forcément */
 }
 
 
 .banner-article.short{
-	--illus-width : 200px;
+	--illus-width : 150px;
 }
 
 .banner-article.title {
-	--illus-width : 200px;
+	--illus-width : 150px;
 }
 
 .banner-article.minimal {
