@@ -6,10 +6,9 @@ DONE
 TODO
 ----
 
- - résoudre le problème des file_url doublés et avoir le $attach_f accessible pour cpuAudioPublic
   - moderniser 
  	- passer les CSS en nested notation
- - regrouper, simplifier les règles @media
+    - regrouper, simplifier les règles @media
  - refaire la liste des catégories sidebar, pour inclure la sous catégorie Chroniques
  - Mettre les images en vignette plutôt qu'en background
  - Reconstruire le layout depuis la une
@@ -33,7 +32,7 @@ Vérifier sur :
 
 Bugs dotclear notés : 
  - https://codeberg.org/Dotclear/dotclear/issues/164 `widgetcontainerformat` n'est jamais exploitée.
- - https://codeberg.org/Dotclear/dotclear/issues/165 Pouvoir ré-accéder aux variables front `$attach_f` et `$attach_i` 
+ - https://codeberg.org/Dotclear/dotclear/issues/165 Pouvoir ré-accéder aux variables front `$attach_f` et `$attach_i` , et donc -réécrire le plugin dotclear de CPUaudio
  - url `/tags` n'est plus là
 
 Autres bugs notés :
