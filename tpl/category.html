@@ -51,18 +51,21 @@
 <tpl:Block name="body-tag"><body class="dc-category"></tpl:Block>
 
 <tpl:Block name="main-content">
-	<div id="content-info">
-		<h2>
-			<tpl:CategoryParents>
-				<a href="{{tpl:CategoryURL}}">{{tpl:CategoryTitle encode_html="1"}}</a> ›
-			</tpl:CategoryParents>
-			{{tpl:CategoryTitle encode_html="1"}}
-		</h2>
+	<header class="banner-article fond_vert">
+		<div class="encloser">
+			<h2>
+				<tpl:CategoryParents>
+					<a href="{{tpl:CategoryURL}}">{{tpl:CategoryTitle encode_html="1"}}</a> ›
+				</tpl:CategoryParents>
+				{{tpl:CategoryTitle encode_html="1"}}
+			</h2>
 
 
-		<div class="content-info__cat-desc  no-images">
-			{{tpl:CategoryDescription}}
+			<div class="content-info__cat-desc  no-images">
+				{{tpl:CategoryDescription}}
+			</div>
 		</div>
+	</header>
 
 
 		<tpl:CategoryFirstChildren>
@@ -77,7 +80,6 @@
 				</div>
 			</tpl:CategoriesFooter>
 		</tpl:CategoryFirstChildren>
-	</div>	<!-- End #content-info -->
 
 	<div class="content-inner">
 		<tpl:Entries category="#self ?sub" no_context="1">
