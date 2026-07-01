@@ -603,7 +603,12 @@ ul ul, ul ol, ol ol, ol ul {
 	#blognav, #blogextra {
 		flex: 0 0 49%;
 		vertical-align: top;
+
+		details::details-content {
+			content-visibility: visible;
+		}
 	} 
+		
 }
 
 	
@@ -1323,7 +1328,8 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 
 }
 
-
+/*
+pas faisable àmha en mode flex
 .banner-article.entry-series img:before {
 	content: "";
 	position: absolute;
@@ -1333,7 +1339,7 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 	left: -5px;
 	z-index: -1;
 }
-
+*/
 
 .calque {
 	/*background : var(--calque-bg);*/
@@ -1341,8 +1347,8 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 	/*
 	pas joli du tout par rapport à text-shadow : il manque la possibilité de faire le stroke centré, inset ou outset
 	-webkit-text-stroke-width: 1px;
-  	-webkit-text-stroke-color: var(--calque-out);
-  	*/
+	-webkit-text-stroke-color: var(--calque-out);
+	*/
 	line-height: normal; /* due to Roboto */
 	/*backdrop-filter: blur(5px);*/
 }
@@ -1522,6 +1528,7 @@ ul.tags {
 	#wrapper {
 		display : flex;
 	}
+
 }
 
 #search {
