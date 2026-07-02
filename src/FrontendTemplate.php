@@ -91,7 +91,6 @@ class FrontendTemplate
 
 	public static function EntryCategoryColorClass($attr) {
 		return '<?php
-			error_log("category :: ".App::frontend()->context()->posts->cat_url);
 			switch (App::frontend()->context()->posts->cat_url) {
 				case "Programmes": 
 					echo "fond_rouge";

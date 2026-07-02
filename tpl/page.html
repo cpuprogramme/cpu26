@@ -16,45 +16,25 @@
 
 	<header id="p{{tpl:EntryID}}" class="post full banner-article fond_bleu" role="article">
 		<div class="encloser">
-		<h2 class="post-title">{{tpl:EntryTitle encode_html="1"}}</h2>
-		<!-- # --BEHAVIOR-- publicEntryBeforeContent -->
+			<h2 class="post-title">{{tpl:EntryTitle encode_html="1"}}</h2>
+			<!-- # --BEHAVIOR-- publicEntryBeforeContent -->
 		</div>
+		<tpl:Attachments>
+			<tpl:AttachmentIf is_mp3="1">
+				{{tpl:include src="_mp3_player.html"}}
+			</tpl:AttachmentIf>
+		</tpl:Attachments>
 
 	</header>
 
-		{{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
-		<tpl:EntryIf extended="1">
-			<div class="post-excerpt">{{tpl:EntryExcerpt}}</div>
-		</tpl:EntryIf>
-		<div class="post-content">{{tpl:EntryContent}}</div>
-		<p class="page-info">{{tpl:lang Published on}} {{tpl:EntryDate}}
-			{{tpl:lang by}} {{tpl:EntryAuthorLink}}</p>
-		<!-- # --BEHAVIOR-- publicEntryAfterContent -->
-		{{tpl:SysBehavior behavior="publicEntryAfterContent"}}
-	<!-- # Attachments -->
-	<tpl:Attachments>
-		<tpl:AttachmentsHeader>
-			<div id="attachments" class="attachments">
-				<h3>{{tpl:lang Attachments}}</h3>
-				<ul>
-		</tpl:AttachmentsHeader>
-		<li class="{{tpl:AttachmentType}}">
-			<tpl:AttachmentIf is_audio="1">
-				{{tpl:include src="_audio_player.html"}}
-			</tpl:AttachmentIf>
-			<tpl:AttachmentIf is_video="1">
-				{{tpl:include src="_video_player.html"}}
-			</tpl:AttachmentIf>
-			<tpl:AttachmentIf is_audio="0" is_video="0">
-				<a href="{{tpl:AttachmentURL}}"
-						title="{{tpl:AttachmentFileName}} ({{tpl:AttachmentSize}})">{{tpl:AttachmentTitle}}</a>
-			</tpl:AttachmentIf>
-		</li>
-		<tpl:AttachmentsFooter>
-			</ul>
-			</div>
-		</tpl:AttachmentsFooter>
-	</tpl:Attachments>
+	{{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
+	<tpl:EntryIf extended="1">
+		<div class="post-excerpt">{{tpl:EntryExcerpt}}</div>
+	</tpl:EntryIf>
+	<div class="post-content">{{tpl:EntryContent}}</div>
+	<!-- # --BEHAVIOR-- publicEntryAfterContent -->
+	{{tpl:SysBehavior behavior="publicEntryAfterContent"}}
+
 	<!-- # Comments -->
 	<tpl:EntryIf show_comments="1">
 		<tpl:Comments>
@@ -130,38 +110,5 @@
 			</fieldset>
 		</form>
 	</tpl:EntryIf>
-	<!-- # Trackbacks -->
-	<tpl:EntryIf show_pings="1">
-		<div id="pings" class="pings">
-			<h3>{{tpl:lang They posted on the same topic}}</h3>
-			<tpl:Pings>
-				<tpl:PingsHeader>
-					<dl>
-				</tpl:PingsHeader>
-				<dt id="c{{tpl:PingID}}" class="{{tpl:PingIfOdd}} {{tpl:PingIfFirst}}"><a href="#c{{tpl:PingID}}"
-					class="ping-number">{{tpl:PingOrderNumber}}.</a>
-					{{tpl:lang On}} {{tpl:PingDate}}, {{tpl:PingTime}}
-					{{tpl:lang by}} {{tpl:PingBlogName encode_html="1"}}</dt>
-				<dd class="{{tpl:PingIfOdd}} {{tpl:PingIfFirst}}">
-					<!-- # --BEHAVIOR-- publicPingBeforeContent -->
-					{{tpl:SysBehavior behavior="publicPingBeforeContent"}}
-					<p><a href="{{tpl:PingAuthorURL}}"
-					{{tpl:PingNoFollow}}>{{tpl:PingTitle encode_html="1"}}</a></p>
-					{{tpl:PingContent}}
-					<!-- # --BEHAVIOR-- publicPingAfterContent -->
-					{{tpl:SysBehavior behavior="publicPingAfterContent"}}
-				</dd>
-				<tpl:PingsFooter>
-					</dl>
-				</tpl:PingsFooter>
-			</tpl:Pings>
-		</div>
-	</tpl:EntryIf>
-	<tpl:EntryIf pings_active="1">
-		<p id="ping-url" class="ping-url">{{tpl:lang Trackback URL}}&nbsp;: {{tpl:EntryPingLink}}</p>
-	</tpl:EntryIf>
-	<tpl:EntryIf operator="or" comments_active="1" pings_active="1">
-		<p id="comments-feed" class="comments-feed"><a class="feed" href="{{tpl:BlogFeedURL type="atom"}}/comments/{{tpl:EntryID}}"
-		title="{{tpl:lang This page's comments feed}}">{{tpl:lang This page's comments feed}}</a></p>
-	</tpl:EntryIf>
+
 </tpl:Block>
