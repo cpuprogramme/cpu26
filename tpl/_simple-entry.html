@@ -4,8 +4,8 @@
 		<div class="encloser">
 			{{tpl:include src="_entry-illustration.html"}}
 
-			<div class="calque">
-				<h2 class="post-title"><span class="calque">{{tpl:EntryTitle encode_html="1"}}</span></h2>
+			<div>
+				<h2 class="post-title">{{tpl:EntryTitle encode_html="1"}}</h2>
 
 				<p class="post-info">
 							<span class="post-date">{{tpl:EntryDate}}. </span>
@@ -24,7 +24,7 @@
 					<tpl:TagsHeader>
 						<ul class="post-tags-list">
 					</tpl:TagsHeader>
-						<li class="post-tags-item calque"><a href="{{tpl:TagURL}}">{{tpl:TagID}}</a></li>
+						<li class="post-tags-item"><a href="{{tpl:TagURL}}">{{tpl:TagID}}</a></li>
 					<tpl:TagsFooter>
 						</ul>
 					</tpl:TagsFooter>
@@ -74,7 +74,7 @@
 		<h3 id="serie" class="notsobig">Cette <em lang="en">release</em> est dans <a href="{{tpl:SerieURL}}">la série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a></h3>
 		<ul>
 			<tpl:Entries order="asc">
-				<li><strong><a href="{{tpl:EntryURL}}" class="calque">{{tpl:EntryTitle}}</a></strong></li>
+				<li><strong><a href="{{tpl:EntryURL}}">{{tpl:EntryTitle}}</a></strong></li>
 			</tpl:Entries>
 		</ul>
 	</aside>

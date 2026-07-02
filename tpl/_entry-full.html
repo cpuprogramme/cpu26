@@ -6,24 +6,27 @@
 	<!-- style="background-image:url({{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}})" --> 
 
 		<div class="post-meta">
-			<span class="calque">diffusé le <time datetime="{{tpl:EntryDate iso8601="1"}}">{{tpl:EntryDate}}</time></span>
+			<p>
+			diffusé le <time datetime="{{tpl:EntryDate iso8601="1"}}">{{tpl:EntryDate}}</time>
+			</p>
 			<tpl:EntrySeries>
-				<p><span class="calque">Dans <a href="{{tpl:SerieURL}}">la série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a></span></p>
+				<p>Dans <a href="{{tpl:SerieURL}}">la série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a></p>
 			</tpl:EntrySeries>
 		</div>
 
-		<h3 class="post-title verybig"><a href="{{tpl:EntryURL}}" class="calque">{{tpl:EntryTitle encode_html="1"}}</a></h3>
+		<h3 class="post-title verybig"><a href="{{tpl:EntryURL}}">{{tpl:EntryTitle encode_html="1"}}</a></h3>
 
 		<div class="post-meta">
 
 			<tpl:EntryTags>
 				<tpl:TagsHeader>
-					<span class="calque">thèmes : </span>
+					<p>thèmes :
 					<ul class="post-tags-list">
 				</tpl:TagsHeader>
-					<li class="post-tags-item calque"><a href="{{tpl:TagURL}}">{{tpl:TagID}}</a></li>
+					<li class="post-tags-item"><a href="{{tpl:TagURL}}">{{tpl:TagID}}</a></li>
 				<tpl:TagsFooter>
 					</ul>
+					</p>
 				</tpl:TagsFooter>
 			</tpl:EntryTags>
 

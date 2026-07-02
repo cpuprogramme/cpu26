@@ -6,14 +6,11 @@ DONE
 TODO
 ----
 
-  - moderniser 
- 	- passer les CSS en nested notation
-    - simplifier les règles @media
+ - passer les CSS en nested notation
  - refaire la liste des catégories sidebar, pour inclure la sous catégorie Chroniques
- - Mettre les images en vignette plutôt qu'en background
  - Reconstruire le layout depuis la une
- - virer .calque ?
- - tester avec une page info en une
+ - insérer le logo de la radio en svg ?
+ - tester avec une page info en une  . utiliser fond_vert ou fond_bleu
  - tester avec un Teaser mis en exergue
  - vérifier que `issue57()` dans le code javascript marche toujours
  - Animer le liseret détachant les blocs header audio

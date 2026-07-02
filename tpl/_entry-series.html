@@ -3,12 +3,12 @@
 		<!--- créer sur l'image un epilement de pochettes -->
 		{{tpl:include src="_entry-illustration.html"}}
 	   
-		<div class="calque">
+		<div>
 			<h3 class="post-title">
-				<span class="calque">{{tpl:SerieID encode_html="1"}}</span>
+				{{tpl:SerieID encode_html="1"}}
 			</h3>
 			<div class="post-meta not-small">
-				<span class="calque">{{tpl:CountEntriesInSeries none="prochainement" one="un seul épisode" more="%s épisodes"}}</span>
+				{{tpl:CountEntriesInSeries none="prochainement" one="un seul épisode" more="%s épisodes"}}
 			</div>
 		</div>
 	</a>

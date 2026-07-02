@@ -62,8 +62,6 @@ body/*:root*/ {
 	--link-side : black;
 	--background-link-side : #11f0f0;
 	--quote : #626262;
-	--calque-bg : #ffffff77;
-	--calque-out-within : #ffffffbb;
 	--calque-out : white;
 	--illus-width : 200px;
 
@@ -113,8 +111,6 @@ body/*:root*/ {
 		--background-link-side : #ee0f0f;
 		--link-side : white;
 		--quote : #666;
-		--calque-bg : #00000077;
-		--calque-out-within : #000000bb;
 		--calque-out : black;
 		/*
 		--cpu-background : transparent;
@@ -1170,21 +1166,7 @@ pas faisable àmha en mode flex
 }
 */
 
-.calque {
-	/*background : var(--calque-bg);*/
-	text-shadow : 1px 1px 0 var(--calque-out), -1px 1px 0 var(--calque-out), 1px -1px 0 var(--calque-out), -1px -1px 0 var(--calque-out);
-	/*
-	pas joli du tout par rapport à text-shadow : il manque la possibilité de faire le stroke centré, inset ou outset
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: var(--calque-out);
-	*/
-	line-height: normal; /* due to Roboto */
-	/*backdrop-filter: blur(5px);*/
-}
-
-
 .no-images img { display : none }
-
 
 /*** SPECIFIC DSN 15 **/
 
@@ -1554,7 +1536,8 @@ ul.tags {
 
 @media screen and (min-width: 1201px) and (max-width: 2000px) {
 	#page {
-		max-width: 80em; }
+		max-width: 80em;
+	}
 
 	#main {
 		flex : 0 0 75%;
