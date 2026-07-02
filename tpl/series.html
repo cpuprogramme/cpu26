@@ -1,36 +1,35 @@
 {{tpl:extends parent="__layout.html"}}
 
 <tpl:Block name="head-title">
-  <title>Séries - {{tpl:BlogName encode_html="1"}}</title>
+	<title>Séries - {{tpl:BlogName encode_html="1"}}</title>
 </tpl:Block>
 
 <tpl:Block name="head-linkrel">
-  <link rel="contents" href="{{tpl:BlogArchiveURL}}" title="{{tpl:lang Archives}}" />
-  <link rel="meta" type="application/xbel+xml" title="Blogroll" href="{{tpl:BlogrollXbelLink}}" />
+	<link rel="contents" href="{{tpl:BlogArchiveURL}}" title="{{tpl:lang Archives}}" />
+	<link rel="meta" type="application/xbel+xml" title="Blogroll" href="{{tpl:BlogrollXbelLink}}" />
 </tpl:Block>
 
 <tpl:Block name="body-tag"><body class="dc-series"></tpl:Block>
 
 <tpl:Block name="main-content">
 
-  <h2>Séries</h2>
-  <p>
-    Certains sujets sont fractionnés sur plusieurs programmes.
-  </p>
-  <div class="content-inner">
-    <tpl:Series>
-    <h3><a href="{{tpl:SerieURL}}" class="tag{{tpl:SerieRoundPercent}}">{{tpl:SerieID}}</a></h3>
-      <p>{{tpl:CountEntriesInSeries none="prochainement" one="un seul épisode" more="%s épisodes"}}</p>
-      <div class="flex">
-        <tpl:Entries lastn="4">
-          <article class="post short {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} banner-article" role="article" style="background-image:url({{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}})">
-            <h4 class="post-title"><a href="{{tpl:EntryURL}}" class="calque">{{tpl:EntryTitle encode_html="1"}}</a></h4>
-
-          </article>
-          
-        </tpl:Entries>
-    </div>
-
-    </tpl:Series>
-  </div>
+	<h2>Séries</h2>
+	<p>
+		Certains sujets sont fractionnés sur plusieurs programmes.
+	</p>
+	<div class="content-inner">
+		<tpl:Series>
+			<h3><a href="{{tpl:SerieURL}}" class="tag{{tpl:SerieRoundPercent}}">{{tpl:SerieID}}</a></h3>
+			<div class="flex-entries">
+				<tpl:Entries lastn="4">
+					{{tpl:include src="_entry-minimal.html"}}
+				</tpl:Entries>
+			</div>
+			<p>
+				<a href="{{tpl:SerieURL}}">
+					{{tpl:CountEntriesInSeries none="prochainement" one="un seul épisode" more="%s épisodes"}}
+				</a>
+			</p>
+		</tpl:Series>
+	</div>
 </tpl:Block>
