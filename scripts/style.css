@@ -828,17 +828,14 @@ ul ul, ul ol, ol ol, ol ul {
 	padding-left: 1em;
 	margin-top: .5em; }
 
-.post-feedback {
-	max-width: 42em;
-	margin: 3em auto;
-	clear: both; 
-	
-	h3 {
-		text-align: center;
-		font-size: 1.25em;
-		font-weight: bold;
-		color: var(--quote);
-	}
+#add-a-comment {
+	/* opacify to get it displayable */
+	background : var(--background-comment);
+	z-index : 1000;
+}
+
+#add-a-comment::backdrop {
+	background : #7777; /* placeholder value. Should use normal brackground but opacified */
 }
 
 .comments-list {
@@ -874,15 +871,6 @@ ul ul, ul ol, ol ol, ol ul {
 	line-height: 2.5em;
 	text-align: center; }
 
-.comment-form  {
-	overflow: hidden;
-	padding: .75em 3em .1em;
-	margin-bottom: 2em;
-	border-radius: .25em;
-	box-shadow: 0 2px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.2);
-	border : 4px solid  var(--background-comment);
-
-	}
 
 .field {
 	label {
@@ -1491,22 +1479,6 @@ ul.tags {
 
 	.post-day-date:before {
 		margin-right: 2em; }
-
-	.post-feedback h3:after,
-	.post-feedback h3:before {
-		display: inline-block;
-		height: 1px;
-		content: " ";
-		background-color: gainsboro;
-		text-shadow: none;
-		width: 20%;
-		margin-bottom: .33em; }
-
-	.post-feedback h3:after {
-		margin-left: 2em; }
-
-	.post-feedback h3:before {
-		margin-right: 2em; } 
 
 	.dc-archive .content-inner {
 		margin-left: 3em;
