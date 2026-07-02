@@ -335,6 +335,10 @@ audio, canvas, video, summary {
 	display: inline-block;
 }
 
+audio {
+	width : 100%;
+}
+
 figure {
 	margin: 0;
 }
@@ -1180,13 +1184,6 @@ pas faisable àmha en mode flex
 
 
 .no-images img { display : none }
-
-
-audio {
-	width : 100%;
-}
-
-
 
 
 /*** SPECIFIC DSN 15 **/
