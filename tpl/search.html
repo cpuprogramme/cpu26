@@ -29,20 +29,18 @@
 </tpl:Block>
 <tpl:Block name="main-content">
 
-	<header class="banner-article fond_vert">
-		<div class="encloser">
-			<div>
-				<h2>{{tpl:lang Search}}</h2>
-				<tpl:SysIf search_count="==0">
-					<p>{{tpl:SysSearchString encode_html="1" string="Your search for <q>%1$s</q> returned no result."}}</p>
-				</tpl:SysIf>
-				<tpl:SysIf search_count="==1">
-					<p>{{tpl:SysSearchString encode_html="1" string="Your search for <q>%1$s</q> returned <strong>%2$s</strong> result."}}</p>
-				</tpl:SysIf>
-				<tpl:SysIf search_count="&gt;1">
-					<p>{{tpl:SysSearchString encode_html="1" string="Your search for <q>%1$s</q> returned <strong>%2$s</strong> results."}}</p>
-				</tpl:SysIf>
-			</div>
+	<header>
+		<h2>{{tpl:lang Search}}</h2>
+		<div>
+			<tpl:SysIf search_count="==0">
+				<p>{{tpl:SysSearchString encode_html="1" string="Your search for <q>%1$s</q> returned no result."}}</p>
+			</tpl:SysIf>
+			<tpl:SysIf search_count="==1">
+				<p>{{tpl:SysSearchString encode_html="1" string="Your search for <q>%1$s</q> returned <strong>%2$s</strong> result."}}</p>
+			</tpl:SysIf>
+			<tpl:SysIf search_count="&gt;1">
+				<p>{{tpl:SysSearchString encode_html="1" string="Your search for <q>%1$s</q> returned <strong>%2$s</strong> results."}}</p>
+			</tpl:SysIf>
 		</div>
 	</header>
 
