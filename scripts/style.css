@@ -1101,7 +1101,7 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 		flex-direction: row;
 		align-items : center;
 		gap: 10px;
-		& > .calque {
+		& > div {
 			width : 100%;
 		}
 	}
