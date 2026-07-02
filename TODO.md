@@ -8,11 +8,10 @@ TODO
 
   - moderniser 
  	- passer les CSS en nested notation
-    - regrouper, simplifier les règles @media
+    - simplifier les règles @media
  - refaire la liste des catégories sidebar, pour inclure la sous catégorie Chroniques
  - Mettre les images en vignette plutôt qu'en background
  - Reconstruire le layout depuis la une
- - passer le formulaire de commentaires en `<details>`
  - virer .calque ?
  - tester avec une page info en une
  - tester avec un Teaser mis en exergue
@@ -21,7 +20,7 @@ TODO
  - Ajouter des images de fond (uniquement sur écrans larges)
  	- avec un effet css parallax ? https://css-tricks.com/bringing-back-parallax-with-scroll-driven-css-animations/
  - restyliser le champ recherche avec la couleur recherche
- - restyliser le header de résultat de recherche avec la couleurw
+ - restyliser le header de résultat de recherche avec la couleur ?
 
 
 Vérifier sur :

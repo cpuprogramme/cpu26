@@ -797,7 +797,7 @@ ul ul, ul ol, ol ol, ol ul {
 }
 
 
-.post-content {
+.post-content, .post-feedback, .post-attachments, #same_serie {
 	margin : 0 auto 1em;
 	max-width: 42em;
 }
@@ -832,6 +832,12 @@ ul ul, ul ol, ol ol, ol ul {
 	/* opacify to get it displayable */
 	background : var(--background-comment);
 	z-index : 1000;
+	min-width : 80%;
+	min-height : 80%;
+	align-content: center;
+	form {
+		margin : 0 auto;
+	}
 }
 
 #add-a-comment::backdrop {
