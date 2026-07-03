@@ -1504,6 +1504,10 @@ ul.tags {
 			border-bottom: 1px solid white;
 		}
 	}
+
+	.flex-entries {
+		flex-direction: column;
+	}
 }
 
 @media screen and (min-width: 321px) and (max-width: 1200px) {
