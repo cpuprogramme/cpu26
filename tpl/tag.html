@@ -41,18 +41,56 @@
 <tpl:Block name="body-tag"><body class="dc-tag"></tpl:Block>
 
 <tpl:Block name="main-content">
-	<header>
-		<h2><a href="/tags/">Mots-clés</a> › {{tpl:TagID}}</h2>
-	</header>
+	<tpl:Entries>
+		<tpl:EntriesHeader>
+	<nav>
+		<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li class="not-small" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:BlogURL}}" aria-label="Revenir à la page de garde" itemprop="item">
+					<span itemprop="name">CPU</span>
+				</a>
+				<meta itemprop="position" content="1">
+			</li>
+			<li aria-hidden="true">⬜</li>
 
-	<div class="content-inner">
-		<tpl:Entries>
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="/tags/" itemprop="item">
+						<span itemprop="name">Mots-clés</span>	
+					</a>
+				<meta itemprop="position" content="2">
+			</li>
+			<li class="not-small" aria-hidden="true">›</li>
+
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:TagURL}}" itemprop="item">
+					<span itemprop="name">{{tpl:TagID encode_html="1"}}</span>
+				</a>
+				<meta itemprop="position" content="3">
+			</li>
+			<li class="not-small" aria-hidden="true">›</li>
+
+			<li class="spacer" aria-hidden="true"></li>
+
+			<li class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
+				{{tpl:include src="_pagination.html"}}
+			</li>
+		</ul>
+	</nav>
+
+			<header>
+				<h2>Mot-clé <q>{{tpl:TagID}}</q></h2>
+			</header>
+
+			<div class="content-inner">
+		</tpl:EntriesHeader>
 			{{tpl:include src="_entry-short-player.html"}}
 
 			<tpl:EntriesFooter>
-				{{tpl:include src="_pagination.html"}}
+				<p class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
+					{{tpl:include src="_pagination.html"}}
+				</p>
+	</div> <!-- End #content-inner -->
 			</tpl:EntriesFooter>
 
 		</tpl:Entries>
-	</div> <!-- End #content-inner -->
 </tpl:Block>

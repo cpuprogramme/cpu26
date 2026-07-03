@@ -41,18 +41,59 @@
 <tpl:Block name="body-tag"><body class="dc-serie"></tpl:Block>
 
 <tpl:Block name="main-content">
-		<h2><a href="/series">Séries</a> ›  {{tpl:SerieID}}</h2>
-<p>Ce sujet a été fractionné en plusieurs émissions, présentées par ordre chronologique :</p>
+
+	<tpl:Entries order="asc">
+	<tpl:EntriesHeader>
+	<nav>
+		<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li class="not-small" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:BlogURL}}" aria-label="Revenir à la page de garde" itemprop="item">
+					<span itemprop="name">CPU</span>
+				</a>
+				<meta itemprop="position" content="1">
+			</li>
+			<li aria-hidden="true">⬜</li>
+
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="/series" itemprop="item">
+						<span itemprop="name">Séries</span>	
+					</a>
+				<meta itemprop="position" content="2">
+			</li>
+			<li class="not-small" aria-hidden="true">›</li>
+
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:SerieURL}}" itemprop="item">
+					<span itemprop="name">{{tpl:SerieID encode_html="1"}}</span>
+				</a>
+				<meta itemprop="position" content="3">
+			</li>
+			<li class="not-small" aria-hidden="true">›</li>
+
+			<li class="spacer" aria-hidden="true"></li>
+
+			<li class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
+				{{tpl:include src="_pagination.html"}}
+			</li>
+		</ul>
+	</nav>
+
+	<h2>{{tpl:SerieID}}</h2>
+	<p>Ce sujet a été fractionné en plusieurs émissions, présentées par ordre chronologique&nbsp;:</p>
 
 
 	<div class="content-inner">
-		<tpl:Entries order="asc">
+			</tpl:EntriesHeader>
+
+
 			{{tpl:include src="_entry-short-player.html"}}
 
 			<tpl:EntriesFooter>
-				{{tpl:include src="_pagination.html"}}
+				<p class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
+					{{tpl:include src="_pagination.html"}}
+				</p>
+		</div> <!-- End #content-inner -->
 			</tpl:EntriesFooter>
 
-		</tpl:Entries>
-	</div> <!-- End #content-inner -->
+	</tpl:Entries>
 </tpl:Block>

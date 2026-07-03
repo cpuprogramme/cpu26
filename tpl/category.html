@@ -51,11 +51,49 @@
 <tpl:Block name="body-tag"><body class="dc-category"></tpl:Block>
 
 <tpl:Block name="main-content">
+
+	<tpl:Entries category="#self ?sub" no_context="1">
+
+		<tpl:EntriesHeader>
+
+	<nav>
+		<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li class="not-small" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:BlogURL}}" aria-label="Revenir à la page de garde" itemprop="item">
+					<span itemprop="name">CPU</span>
+				</a>
+				<meta itemprop="position" content="1">
+			</li>
+			<li aria-hidden="true">⬜</li>
+
+			<tpl:CategoryParents>
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:CategoryURL}}" itemprop="item">
+						<span itemprop="name">{{tpl:CategoryTitle encode_html="1"}}</span>	
+					</a>
+				<meta itemprop="position" content="2">
+			</li>
+			<li class="not-small" aria-hidden="true">›</li>
+			</tpl:CategoryParents>
+
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:CategoryURL}}" itemprop="item">
+					<span itemprop="name">{{tpl:CategoryTitle encode_html="1"}}</span>
+				</a>
+				<meta itemprop="position" content="3">
+			</li>
+			<li class="not-small" aria-hidden="true">›</li>
+
+			<li class="spacer" aria-hidden="true"></li>
+
+			<li class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
+				{{tpl:include src="_pagination.html"}}
+			</li>
+		</ul>
+	</nav>
+
 	<header>
 		<h2>
-			<tpl:CategoryParents>
-				<a href="{{tpl:CategoryURL}}">{{tpl:CategoryTitle encode_html="1"}}</a> ›
-			</tpl:CategoryParents>
 			{{tpl:CategoryTitle encode_html="1"}}
 		</h2>
 
@@ -79,12 +117,14 @@
 		</tpl:CategoryFirstChildren>
 
 	<div class="content-inner">
-		<tpl:Entries category="#self ?sub" no_context="1">
+		</tpl:EntriesHeader>
 			{{tpl:include src="_entry-short-player.html"}}
 
 			<tpl:EntriesFooter>
-				{{tpl:include src="_pagination.html"}}
-			</tpl:EntriesFooter>
-		</tpl:Entries>
 	</div> <!-- End #content-inner -->
+			<p class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
+				{{tpl:include src="_pagination.html"}}
+			</p>
+			</tpl:EntriesFooter>
+	</tpl:Entries>
 </tpl:Block>

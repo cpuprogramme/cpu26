@@ -29,8 +29,45 @@
 </tpl:Block>
 <tpl:Block name="main-content">
 
+	<tpl:Entries>
+		<tpl:EntriesHeader>
+
+	<nav>
+		<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li class="not-small" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:BlogURL}}" aria-label="Revenir à la page de garde" itemprop="item">
+					<span itemprop="name">CPU</span>
+				</a>
+				<meta itemprop="position" content="1">
+			</li>
+			<li aria-hidden="true">⬜</li>
+
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="#search" itemprop="item">
+						<span itemprop="name">Recherche</span>	
+					</a>
+				<meta itemprop="position" content="2">
+			</li>
+			<li class="not-small" aria-hidden="true">›</li>
+
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="/?q={{tpl:SysSearchString encode_html="1" string="%1$s"}}" itemprop="item">
+					<span itemprop="name"><q>{{tpl:SysSearchString encode_html="1" string="%1$s"}}</q></span>
+				</a>
+				<meta itemprop="position" content="3">
+			</li>
+			<li class="not-small" aria-hidden="true">›</li>
+
+			<li class="spacer" aria-hidden="true"></li>
+
+			<li class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
+				{{tpl:include src="_pagination.html"}}
+			</li>
+		</ul>
+	</nav>
+
 	<header>
-		<h2>{{tpl:lang Search}}</h2>
+		<h2>{{tpl:lang Search}} <q>{{tpl:SysSearchString encode_html="1" string="%1$s"}}</q></h2>
 		<div>
 			<tpl:SysIf search_count="==0">
 				<p>{{tpl:SysSearchString encode_html="1" string="Your search for <q>%1$s</q> returned no result."}}</p>
@@ -45,21 +82,16 @@
 	</header>
 
 	<div class="content-inner">
-		<tpl:Entries>
+		</tpl:EntriesHeader>
+		
 			{{tpl:include src="_entry-short-player.html"}}
 			<tpl:EntriesFooter>
 				<tpl:Pagination>
-					<p class="pagination">
-						<tpl:PaginationIf end="0">
-							<a href="{{tpl:PaginationURL offset="+1"}}" class="prev">&#171; {{tpl:lang previous entries}}</a> -
-						</tpl:PaginationIf>
-						{{tpl:lang page}} {{tpl:PaginationCurrent}} {{tpl:lang of}} {{tpl:PaginationCounter}}
-						<tpl:PaginationIf start="0">
-							- <a href="{{tpl:PaginationURL offset="-1"}}" class="next">{{tpl:lang next entries}} &#187;</a>
-						</tpl:PaginationIf>
+					<p class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
+						{{tpl:include src="_pagination.html"}}
 					</p>
 				</tpl:Pagination>
+			</div> <!-- End #content-inner -->
 			</tpl:EntriesFooter>
 		</tpl:Entries>
-	</div> <!-- End #content-inner -->
 </tpl:Block>
