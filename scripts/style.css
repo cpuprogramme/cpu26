@@ -1511,6 +1511,7 @@ ul.tags {
 	.flex-entries {
 		flex-direction: column;
 	}
+
 }
 
 @media screen and (min-width: 321px) and (max-width: 1200px) {
@@ -1567,6 +1568,11 @@ ul.tags {
 		box-sizing: border-box;
 		word-wrap: break-word;
 
+	}
+
+	
+	#blogextra  details::details-content {
+		content-visibility: visible;
 	}
 }
 @media screen and (min-width: 2001px) {
