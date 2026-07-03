@@ -1084,6 +1084,7 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 	*/
 	padding : 1em ;
 	/*  mis via la classe dans l'appel, rapport à la catégorie du post  background-color: var(--fond-rouge);*/
+
 	& > * {
 		background : var(--background-item);
 	}
@@ -1102,15 +1103,16 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 		align-items : center;
 		gap: 10px;
 		& > div {
-			width : 100%;
+			flex : 1 0 /*var(--illus-width)*/ 75%;
+			/*width : 75vb;	 /*100%;*/
 		}
 	}
 
 	& picture {
-		flex : 0 0 var(--illus-width);
+		flex : 0 1 /*var(--illus-width)*/ min( var(--illus-width), 25vb );
 		& img {
-			width :  min( var(--illus-width), 100% );
-			height : min( var(--illus-width), 100% );
+
+			width :  100%;
 			aspect-ratio: 1 / 1;
 			display : grid; /* nécessiare pour virer le comportement inline */
 		}

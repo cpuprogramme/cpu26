@@ -6,6 +6,8 @@ DONE
 TODO
 ----
 
+ - dans les banner players, déplacer le player audio sous l'image et le titre en petite largeur
+ - bugs sur certaines petites largeurs sur les titres et les tailles d'icones player
  - passer les CSS en nested notation
  - refaire la liste des catégories sidebar, pour inclure la sous catégorie Chroniques
  - Reconstruire le layout depuis la une
@@ -17,7 +19,7 @@ TODO
  - Ajouter des images de fond (uniquement sur écrans larges)
  	- avec un effet css parallax ? https://css-tricks.com/bringing-back-parallax-with-scroll-driven-css-animations/
  - restyliser le champ recherche avec la couleur recherche
- - restyliser le header de résultat de recherche avec la couleur ?
+ - Si la recherche est vide, proposer des suggestions : tags, séries, catégories, etc
 
 
 Vérifier sur :
