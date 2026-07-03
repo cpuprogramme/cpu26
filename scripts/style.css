@@ -823,7 +823,7 @@ ul ul, ul ol, ol ol, ol ul {
 }
 
 
-.post-content, .post-feedback, .post-attachments, #same_serie {
+.post-content, .post-feedback, .post-attachments, #same_serie, #add-a-comment > * {
 	margin : 0 auto 1em;
 	max-width: 42em;
 }
