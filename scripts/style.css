@@ -1135,10 +1135,18 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 	}
 }
 
+.banner-link a {
+	text-decoration : none !important;
+	/* bloc à 100 du parent */
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
 .banner-link:has(a:focus, a:hover) {
 
 	a:focus, a:hover {
-		outline : none
+		outline : none;
 	}
 
 	& > * {
