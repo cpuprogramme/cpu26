@@ -1,14 +1,17 @@
 DONE
 ----
  - passer en dotclear moderne
- - virer l'autoplay du cpu-audio : trop pénible. 
+ - virer l'autoplay du cpu-audio : trop pénible.
+ - breadcrumb à tous les étages
+ - banner incluant pré-écoutes
+ - navigation en sidebar dépliables
+ - commentaire en pop-up
 
 TODO
 ----
 
  - dans les banner players, déplacer le player audio sous l'image et le titre en petite largeur
- - moderniser CSS de cpu-audio, sur les soucis overflow
- - passer les CSS en nested notation
+ - faire .banner-link pour .block-link , notamment pour la sidebar et les zones aveugles `li:hover a`
  - insérer le logo de la radio en svg ?
  - tester avec une page info en une  . utiliser fond_vert ou fond_bleu
  - tester avec un Teaser mis en exergue

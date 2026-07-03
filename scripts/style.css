@@ -533,10 +533,10 @@ ul ul, ul ol, ol ol, ol ul {
 	padding: 1em .5em 2em; }
 
 #main, .link_und {
-	& a {
+	a {
 		text-decoration: underline solid 1px #777;
 	}
-	& a:hover, & a:active , & a:focus  {
+	a:hover, a:active , a:focus  {
 		text-decoration: underline solid 1px var(--link);
 	}
 }
@@ -603,14 +603,15 @@ ul ul, ul ol, ol ol, ol ul {
 	color: var(--link-side);
 	text-shadow: var(--color-neutral) 0px -1px 0px; 
 	flex: 0 0 33%;
-	& a:link, & a:visited {
+
+	a:link, a:visited {
 		/** TODO use a global CSS var  **/
 		color: white;
 		border: none;
 	}
 	/* .sidebar .serie-current, */
-	& a:hover, & a:focus, & a:active,
-	& li:hover, & li:focus {
+	a:hover, a:focus, a:active,
+	li:hover, li:focus {
 		/** TODO use a global CSS var  **/
 		background-color: var(--background-link-side); 
 		text-decoration: none !important;
@@ -631,22 +632,22 @@ ul ul, ul ol, ol ol, ol ul {
 
 .blognav__widgets,
 .blogextra__widgets {
-	& h3, & h4 {
+	h3, h4 {
 		font-size: 1em;
 		color: white;
 		font-weight: bold;
 	}
 
-	& h3 {
+	h3 {
 		text-transform: uppercase;
 	}
 
-	& h4 {
+	h4 {
 		margin-top: 1.5em;
 		margin-bottom: 0;
 	}
 
-	& .widget {
+	.widget {
 		padding: 1em;
 		font-size: .875em;
 		line-height: 1.71429; 
@@ -1190,22 +1191,9 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 
 }
 
-/*
-pas faisable àmha en mode flex
-.banner-article.entry-series img:before {
-	content: "";
-	position: absolute;
-	width: var(--illus-width);
-	height: var(--illus-width);
-	top: 5px;
-	left: -5px;
-	z-index: -1;
-}
-*/
 
 .no-images img { display : none }
 
-/*** SPECIFIC DSN 15 **/
 
 .blognav__widgets, .blogextra__widgets {
 	li {
@@ -1223,32 +1211,6 @@ pas faisable àmha en mode flex
 	padding: 0.25em;
 }
 
-/*
-Semble ne plus être utilisé, c'était exclusivement pour la liste de tgas dans la sidebar
-
-.tags li {
-	display : inline-block;
-	padding : 0.25em;
-	border-right: 1px solid gainsboro;
-	margin:0.125em; 
-	border-radius:0.5em;
-} 
-
-ul.tags {
-	li {
-		border: 1px solid #777;
-	}
-}
-
-ul.tags {
-
-	li:hover, li:active, li .tag:focus, li a:hover, li a:active, li .tag a:focus {
-		/ ** TODO , utiliser une CSS var pour simpliefr le code ** /
-		background : red;
-		color : white;
-	}	
-} 
-*/
 
 .breadcrumb {
 	display : flex;
@@ -1331,8 +1293,6 @@ ul.tags {
 
 
 
-
-
 .blogextra__widgets article h3 {
 	color: var(--link);
 	text-transform: none;
@@ -1372,10 +1332,6 @@ ul.tags {
 #bulle a {
 	color : #007 !important;
 }
-
-
-
-
 
 /** Ajout de media dans le corps de l'article **/ 
 
