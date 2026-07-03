@@ -1118,10 +1118,6 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 		background : var(--background-item);
 	}
 
-	& > a:focus, & > a:hover {
-		background : var(--calque-out);
-	}
-
 	& .encloser {
 		display : flex;
 		flex-direction: row;
@@ -1140,6 +1136,17 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 			aspect-ratio: 1 / 1;
 			display : grid; /* nécessiare pour virer le comportement inline */
 		}
+	}
+}
+
+.banner-link:has(a:focus, a:hover) {
+
+	a:focus, a:hover {
+		outline : none
+	}
+
+	& > * {
+		background : var(--calque-out);
 	}
 }
 
