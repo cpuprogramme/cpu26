@@ -7,6 +7,7 @@ TODO
 ----
 
  - dans les banner players, déplacer le player audio sous l'image et le titre en petite largeur
+ - moderniser CSS de cpu-audio, sur les soucis overflow
  - bugs sur certaines petites largeurs sur les titres et les tailles d'icones player
  - passer les CSS en nested notation
  - refaire la liste des catégories sidebar, pour inclure la sous catégorie Chroniques

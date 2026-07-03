@@ -48,7 +48,7 @@ body/*:root*/ {
 	scroll-margin: 100px;
 	color-scheme: light dark;
 	--cpu-font-family : "Roboto Condensed", Lato, "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-	/*--cpu-font-size : 16px;*/ /* should be inverted  */
+	--cpu-font-size : 16px; /* should be inverted  */
 	--cpu-line-height : 1;
 	--background-neutral : #eee;
 	--background-sidebar : #ddd;
@@ -325,7 +325,8 @@ td:first-child, th:first-child {
 /* HTML5 for old browsers */
 article, aside, details, figcaption, figure, footer,
 header, hgroup, main, nav, section {
-	display: block; }
+	display: block;
+}
 
 audio, canvas, video, summary {
 	display: inline-block;
@@ -349,9 +350,9 @@ svg:not(:root) {
 
 /* Headings reset */
 h1, h2, h3, h4, h5, h6 {
-	font-size: 1em;
 	font-weight : bold; /* for paint before having loaded roboto */
-	margin: 0; }
+	margin: 0;
+}
 
 
 /*
@@ -369,12 +370,14 @@ h1 {
 	line-height: 1.2; }
 
 h2 , .verybig {
-	font-size: 4em;
+	/*font-size: 4em;*/
+	font-size : calc(3 * var(--cpu-font-size));
 	line-height: 1.2;
 	margin-bottom: 0.5em; }
 
 h3 , .notsobig {
-	font-size: 1.75em;
+	/*font-size: 1.75em;*/
+	font-size : calc(2 * var(--cpu-font-size));
 	margin-top: 0.5714286em;
 	margin-bottom: 0.4285714em; }
 
@@ -1031,7 +1034,7 @@ menu, menu ul {
 }
 
 #motto {
-	font-size : 18px;
+	font-size : var(--cpu-font-size);
 	padding : 8px;
 	overflow : hidden;
 	text-overflow: ellipsis;
@@ -1534,6 +1537,10 @@ ul.tags {
 }
 
 @media screen and (min-width: 1201px) {
+	body {
+		--cpu-font-size : 18px;
+	}
+
 	#wrapper {
 		display : flex;
 	}
