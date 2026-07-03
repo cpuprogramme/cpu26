@@ -323,12 +323,34 @@ td:first-child, th:first-child {
 
 
 /* HTML5 for old browsers */
-article, aside, details, figcaption, figure, footer,
+article, aside, figcaption, figure, footer,
 header, hgroup, main, nav, section {
 	display: block;
 }
 
-audio, canvas, video, summary {
+details {
+	summary {
+		cursor : pointer;
+		h3 {
+			display : inline;
+		}
+	}
+	summary::marker {
+		content : "⯈ ";
+	}
+}
+
+details/*:open*/::details-content {
+	border-left :  2px solid green;
+	margin-left : 5px;
+}
+
+
+details[open] summary::marker {
+	content : "⯆ ";
+}
+
+audio, canvas, video {
 	display: inline-block;
 }
 
@@ -1570,7 +1592,6 @@ ul.tags {
 
 	}
 
-	
 	#blogextra  details::details-content {
 		content-visibility: visible;
 	}

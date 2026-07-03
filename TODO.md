@@ -9,6 +9,7 @@ TODO
  - dans les banner players, déplacer le player audio sous l'image et le titre en petite largeur
  - moderniser CSS de cpu-audio, sur les soucis overflow
  - bugs sur certaines petites largeurs sur les titres et les tailles d'icones player
+ - uniformiser le fil d'Ariane (catégories, séries, tags, recherche) avec reprise en haut des fléches préc/suiv
  - passer les CSS en nested notation
  - refaire la liste des catégories sidebar, pour inclure la sous catégorie Chroniques
  - Reconstruire le layout depuis la une
