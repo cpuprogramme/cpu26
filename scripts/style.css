@@ -1128,15 +1128,14 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 		align-items : center;
 		gap: 10px;
 		& > div {
-			flex : 1 0 /*var(--illus-width)*/ 75%;
-			/*width : 75vb;	 /*100%;*/
+			flex : 1 0 75%;
 		}
 	}
 
 	& picture {
-		flex : 0 1 /*var(--illus-width)*/ min( var(--illus-width), 25vb );
-		& img {
+		flex : 0 1 min( var(--illus-width), 25vb );
 
+		& img {
 			width :  100%;
 			aspect-ratio: 1 / 1;
 			display : grid; /* nécessiare pour virer le comportement inline */
