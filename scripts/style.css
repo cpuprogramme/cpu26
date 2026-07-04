@@ -64,6 +64,8 @@ body/*:root*/ {
 	--quote : #626262;
 	--calque-out : white;
 	--illus-width : 200px;
+	--h2-factor : 3;
+	--h3-factor : 2;
 
 
 	--fond-bleu : #009EDA;
@@ -393,13 +395,13 @@ h1 {
 
 h2 , .verybig {
 	/*font-size: 4em;*/
-	font-size : calc(3 * var(--cpu-font-size));
+	font-size : calc(var(--h2-factor) * var(--cpu-font-size));
 	line-height: 1.2;
 	margin-bottom: 0.5em; }
 
 h3 , .notsobig {
 	/*font-size: 1.75em;*/
-	font-size : calc(2 * var(--cpu-font-size));
+	font-size : calc(var(--h3-factor) * var(--cpu-font-size));
 	margin-top: 0.5714286em;
 	margin-bottom: 0.4285714em; }
 
@@ -447,8 +449,7 @@ blockquote:after {
 
 blockquote:before {
 	content: open-quote;
-/*  float: left;
-	margin-right: .25em; */}
+}
 
 blockquote:after {
 	content: close-quote;
@@ -1120,7 +1121,7 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 		background : var(--background-item);
 	}
 
-	& .encloser {
+	.encloser {
 		display : flex;
 		flex-direction: row;
 		align-items : center;
@@ -1130,13 +1131,13 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 		}
 	}
 
-	& picture {
-		flex : 0 1 min( var(--illus-width), 25vb );
+	picture {
+		/*flex : 0 1 min( var(--illus-width), 25vb );*/
 
-		& img {
+		img {
 			width :  100%;
 			aspect-ratio: 1 / 1;
-			display : grid; /* nécessiare pour virer le comportement inline */
+			display : grid; /* nécessaire pour virer le comportement inline */
 		}
 	}
 }
@@ -1405,10 +1406,6 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 		font-size: 1.8em;
 	}
 
-	.post-title {
-		font-size: 2em; 
-	} 
-
 	.comment-number {
 		margin-top: 0;
 	}
@@ -1431,6 +1428,7 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 		font-size: 0.625em;
 		line-height: 2.4em;
 	}
+
 }
 
 @media (min-width: 421px) {
@@ -1505,6 +1503,19 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 		flex-direction: column;
 	}
 
+	.banner-article, .banner-article.img-on-right {
+		.encloser {
+			flex-direction: column;
+		}
+
+		.short {
+			--illus-width : 100px;
+		}
+		picture {
+			max-width : var(--illus-width);
+			/*flex: 0 0 min( var(--illus-width), 25vb );*/
+		}
+	} 
 }
 
 @media screen and (min-width: 641px) and (max-width: 1200px) {
@@ -1527,6 +1538,8 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 @media screen and (max-width: 1200px) {
 	body {
 		--illus-width : 150px;
+		--h2-factor : 2;
+		--h3-factor : 1.5;
 	}
 }
 
