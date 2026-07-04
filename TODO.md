@@ -11,11 +11,9 @@ TODO
 ----
 
  - dans les banner players, déplacer le player audio sous l'image et le titre en petite largeur
- - faire .banner-link pour .block-link , notamment pour la sidebar et les zones aveugles `li:hover a`
  - insérer le logo de la radio en svg ?
- - tester avec une page info en une  . utiliser fond_vert ou fond_bleu
+ - tester avec une page info en une  
  - tester avec un Teaser mis en exergue
- - vérifier que `issue57()` dans le code javascript marche toujours
  - Animer le liseret détachant les blocs header audio
  - Ajouter des images de fond (uniquement sur écrans larges)
  	- avec un effet css parallax ? https://css-tricks.com/bringing-back-parallax-with-scroll-driven-css-animations/
@@ -26,6 +24,7 @@ TODO
 Vérifier sur :
  - Première émission
  - page des chroniques, (liste des types de chroniques)
+ - vérifier que `issue57()` dans le code javascript marche toujours
 
 
 

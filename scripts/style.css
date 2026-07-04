@@ -603,19 +603,6 @@ ul ul, ul ol, ol ol, ol ul {
 	color: var(--link-side);
 	text-shadow: var(--color-neutral) 0px -1px 0px; 
 	flex: 0 0 33%;
-
-	a:link, a:visited {
-		/** TODO use a global CSS var  **/
-		color: white;
-		border: none;
-	}
-	/* .sidebar .serie-current, */
-	a:hover, a:focus, a:active,
-	li:hover, li:focus {
-		/** TODO use a global CSS var  **/
-		background-color: var(--background-link-side); 
-		text-decoration: none !important;
-	}
 }
 
 .blognav__title,
@@ -647,6 +634,24 @@ ul ul, ul ol, ol ol, ol ul {
 		margin-bottom: 0;
 	}
 
+	a {
+		display : block;
+	}
+
+	a:link, a:visited {
+		/** TODO use a global CSS var  **/
+		color: white;
+		border: none;
+	}
+	/* .sidebar .serie-current, */
+	a:hover, a:focus, a:active,
+	summary:hover, summary:focus, summary:active
+	 {
+		/** TODO use a global CSS var  **/
+		background-color: var(--background-link-side); 
+		text-decoration: none !important;
+	}
+
 	.widget {
 		padding: 1em;
 		font-size: .875em;
@@ -662,22 +667,22 @@ ul ul, ul ol, ol ol, ol ul {
 		}
 	}
 
-	& ul {
+	ul {
 		margin: 0; 
-		& li {
+		li {
 			display: block;
-			padding: .25em;
+			/*padding: .25em*/;
 			border-bottom: 1px solid gainsboro;
 		}
 	}
 
-	& li ul {
+	li ul {
 		margin-left: -.25em;
 	}
-	& li li {
+	li li {
 		border-top: 1px solid gainsboro;
 	}
-	& li li:last-child {
+	li li:last-child {
 		border-bottom: none;
 	}
 }
