@@ -88,7 +88,7 @@ body/*:root*/ {
 	--cpu-color : var(--link);
 	--cpu-playing-background : var(--background-sidebar);
 	--cpu-playing-color : var(--link-focus);
-	--cpu-focus-background : var(--background-item);
+	--cpu-focus-background : var(--background-neutral);
 	--cpu-focus-color : var(--link-focus);
 	--cpu-error-background : #a00 ;
 	--cpu-error-color : #ff7 ;
@@ -131,6 +131,7 @@ audio[controls] {
 }
 
 
+
 /** --------------------------------------------------
 		Start
 --------------------------------------------------- */
@@ -169,6 +170,10 @@ a {
 
 :focus {
 	outline: var(--link) 2px solid;
+}
+
+cpu-audio:focus {
+	outline : none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
