@@ -1370,16 +1370,16 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 
 /**
  * 
- * 30em → 320px
- * 40em → 320px
- * 60em   640px
+ * 30em → 320px → 420px (à cause des liens en haut)
+ * 40em → 320px → 420px 
+ * 60em   640px → 420px 
  * 80em → 1200px
  * 100em  2000px
  * **/
 
 
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 420px) {
 
 	body {
 		--illus-width : 50px;
@@ -1431,9 +1431,37 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 		font-size: 0.625em;
 		line-height: 2.4em;
 	}
+	/*
 }
 
-@media (min-width: 321px) {
+@media screen and (max-width: 640px) {
+*/
+
+	#ondemiroir_domain {
+		font-size: 1.5em;
+	}
+
+	.header {
+		padding-bottom: 0;
+	}
+
+	.header__nav {
+		margin-left: -.5em;
+		margin-right: -.5em; 
+		li {
+			display: block;
+			margin-right: 0;
+			border-bottom: 1px solid white;
+		}
+	}
+
+	.flex-entries {
+		flex-direction: column;
+	}
+
+}
+
+@media (min-width: 421px) {
 	.flex-entries {
 		display : flex;
 		flex-wrap : wrap;
@@ -1482,32 +1510,9 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 
 }
 
-@media screen and (max-width: 640px) {
-	#ondemiroir_domain {
-		font-size: 1.5em;
-	}
 
-	.header {
-		padding-bottom: 0;
-	}
 
-	.header__nav {
-		margin-left: -.5em;
-		margin-right: -.5em; 
-		li {
-			display: block;
-			margin-right: 0;
-			border-bottom: 1px solid white;
-		}
-	}
-
-	.flex-entries {
-		flex-direction: column;
-	}
-
-}
-
-@media screen and (min-width: 321px) and (max-width: 1200px) {
+@media screen and (min-width: 421px) and (max-width: 1200px) {
 
 	#sidebar {
 		display : flex;
