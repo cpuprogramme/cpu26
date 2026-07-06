@@ -981,7 +981,8 @@ button.submit:active, button.preview:active {
 
 #content-info h2,
 .content-info__feed {
-	margin-right: 3.5em; }
+	margin-right: 3.5em;
+}
 
 
 .banner {
@@ -1011,6 +1012,7 @@ h1 {
 	top: -20px;
 	z-index : 9;
 	margin-bottom : 1em;
+	box-shadow : 0 0 8px black;
 }
 
 .banner * {
