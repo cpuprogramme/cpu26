@@ -5,7 +5,9 @@
 		{{tpl:EntryCommentCount count_all="1" none="Aucun commentaire" one="Un commentaire" more="%s commentaires"}}
 	</h3>
 	<tpl:EntryIf comments_active="1">
+	<p class="center">
 		<button command="show-modal" commandfor="add-a-comment">{{tpl:lang Add a comment}}</button>
+	</p>
 	</tpl:EntryIf>
 </tpl:EntryIf>
 

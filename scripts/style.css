@@ -497,6 +497,11 @@ p, ul, ol {
 ul ul, ul ol, ol ol, ol ul {
 	margin-top: .5em; }
 
+.center {
+	text-align : center;
+}
+
+
 .post-date,
 .post-cat,
 .post-tags-list
@@ -758,7 +763,7 @@ ul ul, ul ol, ol ol, ol ul {
 }
 
 .post-meta {
-	padding: 0.5714286em 1.1428571em;
+	padding: 0.5em 0;
 	margin-bottom: 0em;
 	clear: both;
 }
