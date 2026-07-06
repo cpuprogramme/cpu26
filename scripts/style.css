@@ -1117,7 +1117,7 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 	/*
 	background : var(--background-item);
 	*/
-	padding : calc(var(--cpu-font-size) /2) ;
+	padding : calc(var(--cpu-font-size) * 0.8) ;
 	/*  mis via la classe dans l'appel, rapport à la catégorie du post  background-color: var(--fond-rouge);*/
 
 	& > * {
