@@ -41,8 +41,7 @@
 <tpl:Block name="body-tag"><body class="dc-tag"></tpl:Block>
 
 <tpl:Block name="main-content">
-	<tpl:Entries>
-		<tpl:EntriesHeader>
+
 	<nav>
 		<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
 			<li class="not-small" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -71,9 +70,11 @@
 
 			<li class="spacer" aria-hidden="true"></li>
 
-			<li class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
-				{{tpl:include src="_pagination.html"}}
-			</li>
+			<tpl:Entries no_content="1" lastn="1">
+				<li class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
+					{{tpl:include src="_pagination.html"}}
+				</li>
+			</tpl:Entries>
 		</ul>
 	</nav>
 
@@ -82,15 +83,16 @@
 			</header>
 
 			<div class="content-inner">
-		</tpl:EntriesHeader>
+	<tpl:Entries>
+		<tpl:EntriesHeader>
 			{{tpl:include src="_entry-short-player.html"}}
 
 			<tpl:EntriesFooter>
 				<p class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
 					{{tpl:include src="_pagination.html"}}
 				</p>
-	</div> <!-- End #content-inner -->
 			</tpl:EntriesFooter>
 
 		</tpl:Entries>
+	</div> <!-- End #content-inner -->
 </tpl:Block>
