@@ -73,8 +73,6 @@ body/*:root*/ {
 	--h2-factor : 3;
 	--h3-factor : 2;
 
-	/*--cpu-focus-color : #111;*/
-
 	--cpu-height : 64px;
 	--cpu-font-small-size : calc(var(--cpu-font-size) * 0.8);
 	--cpu-elapse-width : 160px;
@@ -82,7 +80,6 @@ body/*:root*/ {
 	--cpu-inner-shadow : inset 0px 5px 10px -5px black;
 	--cpu-color-transitions : 0s;
 	--cpu-background-transitions : 0s;
-
 	--cpu-background : transparent;
 	--cpu-color : var(--link);
 	--cpu-playing-background : var(--background-sidebar);
@@ -95,7 +92,6 @@ body/*:root*/ {
 	--cpu-popup-color : var(--background-sidebar);
 	--cpu-cue : var(--link);
 	--cpu-timeline-limits : #f00;
-	/* --cpu-unfold : 0s; not actived */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -113,12 +109,6 @@ body/*:root*/ {
 		--link-side : white;
 		--quote : #666;
 		--calque-out : black;
-		/*
-		--cpu-background : transparent;
-		--cpu-color : #222;
-		--cpu-playing-background : transparent;
-		--cpu-playing-color : #111;
-		*/
 	}
 }
 
@@ -271,7 +261,6 @@ button, input, select, textarea {
 	margin: 0; 
 	color : var(--color-neutral);
 	background : var(--background-main);
-	/*border-radius: .25em;*/
 	border: 2px solid var(--color-neutral);
 	padding : 2px 4px;
 }
@@ -384,14 +373,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/*
-* Scut, a collection of Sass utilities to ease and improve our implementations of common style-code patterns.
-* v0.8.0
-* Docs at http://davidtheclark.github.io/scut
-*/
-/** --------------------------------------------------
-		Common rules
---------------------------------------------------- */
 /* Typographie */
 
 h1 {
@@ -399,29 +380,32 @@ h1 {
 	line-height: 1.2; }
 
 h2 , .verybig {
-	/*font-size: 4em;*/
 	font-size : calc(var(--h2-factor) * var(--cpu-font-size));
 	line-height: 1.2;
-	margin-bottom: 0.5em; }
+	margin-bottom: 0.5em;
+}
 
 h3 , .notsobig {
-	/*font-size: 1.75em;*/
 	font-size : calc(var(--h3-factor) * var(--cpu-font-size));
 	margin-top: 0.5714286em;
-	margin-bottom: 0.4285714em; }
+	margin-bottom: 0.4285714em;
+}
 
 h4 {
 	font-size: 1.3125em;
 	margin-top: 1.1428571em;
-	margin-bottom: 0.7619048em; }
+	margin-bottom: 0.7619048em;
+}
 
 h5 {
 	font-size: 1.125em;
-	margin-top: 1.5555556em; }
+	margin-top: 1.5555556em;
+}
 
 h6 {
 	font-size: 1em;
-	margin-bottom: 0; }
+	margin-bottom: 0;
+}
 
 a {
 	color: var(--link);
@@ -439,7 +423,6 @@ blockquote, q {
 	font-style: italic; }
 
 blockquote {
-	/* font-size: 1.125em; */
 	line-height: 1.33;
 	quotes: '\201C' '\201D';
 	margin-top: 1.7777778em; }
@@ -461,7 +444,7 @@ blockquote:after {
 	text-align: right; }
 
 q, cite, quote  { 
-		quotes:"\201c" "\201d" "\00ab\00a0" "\00a0\00bb"
+	quotes:"\201c" "\201d" "\00ab\00a0" "\00a0\00bb"
 }
 
 code, pre, samp {
@@ -473,21 +456,22 @@ code, pre, samp {
 
 
 kbd {
-		background: #eee;
-		border-color:#ccc #aaa #888 #bbb;
-		border-style:solid;
-		border-width:2px 3px 3px 2px;
-		padding:0 2px;
-		color:#000000;
-		display:inline-block;
-		min-width:15px;
-		text-align:center;
-		white-space:nowrap;
-		box-shadow:0 0 5px rgba(0,0,0,0.5);
+	background: #eee;
+	border-color:#ccc #aaa #888 #bbb;
+	border-style:solid;
+	border-width:2px 3px 3px 2px;
+	padding:0 2px;
+	color:#000000;
+	display:inline-block;
+	min-width:15px;
+	text-align:center;
+	white-space:nowrap;
+	box-shadow:0 0 5px rgba(0,0,0,0.5);
 }
 
 pre {
-	padding: .5em 1em; }
+	padding: .5em 1em; 
+}
 
 	
 p, ul, ol {
@@ -511,9 +495,6 @@ ul ul, ul ol, ol ol, ol ul {
 	background-position: 0 50%;
 	padding-right: .5em; }
 
-/*.post-date {
-	background-image: url(/themes/cpu26/img/icon_date.png); } */
-
 .post-cat {
 	background-image: url(/themes/cpu26/img/icon_category.png); }
 
@@ -521,25 +502,12 @@ ul ul, ul ol, ol ol, ol ul {
 	background-image: url(/themes/cpu26/img/icon_tags.png);
 	padding-left: 22px !important; }
 
-/*
-.comment_count {
-	background-image: url(/themes/cpu26/img/icon_comments.png); }
-
-.attach_count {
-	background-image: url(/themes/cpu26/img/icon_attach.png); }
-
-.post-permalink {
-	background-image: url(/themes/cpu26/img/icon_permalink.png); }*/
 
 /** --------------------------------------------------
 		layout elements
 --------------------------------------------------- */
 
 #main {
-	/*
-	--cpu-background : #333;
-	--cpu-playing-background : #111;*/
-
 	background-color: var(--background-main);
 	padding: 1em .5em 2em; }
 
@@ -591,6 +559,7 @@ ul ul, ul ol, ol ol, ol ul {
 	}
 
 }
+
 #skip-links:focus-within {
 	height : auto;
 }
@@ -610,9 +579,8 @@ ul ul, ul ol, ol ol, ol ul {
 
 .sidebar {
 	padding-top: 2em;
-	background: var(--background-sidebar) /*url(var(--background-img))*/;
+	background: var(--background-sidebar);
 	color: var(--link-side);
-	/* text-shadow: var(--color-neutral) 0px -1px 0px; */
 	flex: 0 0 33%;
 }
 
@@ -655,8 +623,7 @@ ul ul, ul ol, ol ol, ol ul {
 	}
 	/* .sidebar .serie-current, */
 	a:hover, a:focus, a:active,
-	summary:hover, summary:focus, summary:active
-	 {
+	summary:hover, summary:focus, summary:active {
 		/** TODO use a global CSS var  **/
 		background-color: var(--background-link-side); 
 		text-decoration: none !important;
@@ -726,10 +693,9 @@ ul ul, ul ol, ol ol, ol ul {
 	padding: 0;
 	font-size: 0.875em; }
 
-
-	#content-info ul {
-		margin-top: 0.5714286em;
-		padding-left: 0; }
+#content-info ul {
+	margin-top: 0.5714286em;
+	padding-left: 0; }
 
 .content-info__feed {
 	display: inline-block;
@@ -781,16 +747,12 @@ ul ul, ul ol, ol ol, ol ul {
 	vertical-align: baseline;
 }
 
-/* EVOLUTION 2018 BEGINS */
-
 .minimal {
-	/* structure : article.short > a.block > h3 > span.calque  */
 	margin: 0;
 	padding : 0;
 	display : flex;
 	& > a {
 		margin :  0;
-	/*	padding : 1em 0;*/
 		display : flex;
 		flex-direction: column;
 		width : 100%;
@@ -800,10 +762,6 @@ ul ul, ul ol, ol ol, ol ul {
 		}
 	}
 }
-
-
-
-/* EVOLUTION 2018 ENDS */
 
 .post-tags-list {
 	margin: 0;
@@ -820,7 +778,7 @@ ul ul, ul ol, ol ol, ol ul {
 	vertical-align: middle;
 	white-space: nowrap;
 	vertical-align: top; 
-	& a:after {
+	a:after {
 		content: "."; 
 	}
 }
@@ -830,10 +788,10 @@ ul ul, ul ol, ol ol, ol ul {
 
 .post-title {
 	text-align: center;
-	& a, & a:link, & a:visited {
+	a, a:link, a:visited {
 		border-bottom-color: white; 
 	}
-	& a:hover, & a:focus, & a:active {
+	a:hover, a:focus, a:active {
 		background-color: transparent; 
 	}
 }
@@ -978,8 +936,6 @@ button.submit:active, button.preview:active {
 /** --------------------------------------------------
 		Modules
 --------------------------------------------------- */
-/* *** MODULE sidebar off-canvas *** */
-
 
 #content-info h2,
 .content-info__feed {
@@ -1007,7 +963,7 @@ h1 {
 }
 
 .header {
-	background : var(--background-neutral) var(--background-img);
+	background : var(--background-neutral);
 	line-height: normal;
 	padding-top : 20px;
 	position: sticky;
@@ -1051,8 +1007,6 @@ menu, menu ul {
 		}
 	}
 }
-
-
 
 #ondemiroir_domain {
 	flex: 1 1 auto;
@@ -1120,11 +1074,7 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 }
 
 .banner-article {
-	/*
-	background : var(--background-item);
-	*/
 	padding : calc(var(--cpu-font-size) * 0.8) ;
-	/*  mis via la classe dans l'appel, rapport à la catégorie du post  background-color: var(--fond-rouge);*/
 
 	& > * {
 		background : var(--background-item);
@@ -1322,7 +1272,7 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 	max-width: 300px;
 	background: #ffa;
 	color: black;
-	font-size : 11px;
+	font-size : 15px;
 	border: black 1px solid;
 	padding: 10px;
 	border-radius: 20px 20px 20px 0px
@@ -1339,10 +1289,6 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 #bulle a {
 	color : #007 !important;
 }
-
-/** Ajout de media dans le corps de l'article **/ 
-
-
 
 
 @media (max-width: 640px) {
@@ -1367,18 +1313,6 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 		left : 0px;
 	}
 }
-
-
-
-/**
- * 
- * 30em → 320px → 420px (à cause des liens en haut)
- * 40em → 320px → 420px 
- * 60em   640px 
- * 80em → 1200px
- * 100em  2000px
- * **/
-
 
 
 @media screen and (max-width: 420px) {
@@ -1594,9 +1528,6 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 	.header {
 		flex: 0 0 66.7%;
 		padding-bottom: 0;
-		/*
-		box-shadow: rgba(0,0,0,0.5) 1px 1px 10px;
-		*/
 	}
 
 	#main {
