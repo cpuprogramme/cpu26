@@ -7,6 +7,7 @@ DONE
  - banner incluant pré-écoutes
  - navigation en sidebar dépliables
  - commentaire en pop-up
+ - en cas de recherche infrustueuse, proposer des suggestions : tags, séries, catégories, etc
 
 TODO
 ----
@@ -17,8 +18,7 @@ TODO
  - Animer le liseret détachant les blocs header audio
  - Ajouter des images de fond (uniquement sur écrans larges)
  	- avec un effet css parallax ? https://css-tricks.com/bringing-back-parallax-with-scroll-driven-css-animations/
- - restyliser le champ recherche avec la couleur recherche
- - Si la recherche est vide, proposer des suggestions : tags, séries, catégories, etc
+
 
 
 Vérifier sur :
