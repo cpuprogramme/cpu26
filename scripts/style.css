@@ -182,6 +182,12 @@ cpu-audio:focus {
 	}
 }
 
+@media (prefers-reduced-motion: reduce) {
+	:focus {
+		outline-offset: 5px;
+	}
+}
+
 a:active, a:hover {
 	outline: none;
 }
