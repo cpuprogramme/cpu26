@@ -45,6 +45,12 @@
 
 
 body/*:root*/ {
+	--fond-bleu : #009EDA;
+	--fond-vert : #4BB249;
+	--fond-jaune : #F1CB29;
+	--fond-orange : #DA6241;
+	--fond-rouge: #D12625;
+
 	scroll-margin: 100px;
 	color-scheme: light dark;
 	--cpu-font-family : "Roboto Condensed", Lato, "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
@@ -57,7 +63,7 @@ body/*:root*/ {
 	--background-img : url(/themes/cpu26/img/background_graphy-light.png);
 	--background-main : #fff;
 	--background-comment : #eff;
-	--link : #D10000;
+	--link : #00a;
 	--link-focus : #f9f9f9;
 	--link-side : black;
 	--background-link-side : #11f0f0;
@@ -66,12 +72,6 @@ body/*:root*/ {
 	--illus-width : 200px;
 	--h2-factor : 3;
 	--h3-factor : 2;
-
-	--fond-bleu : #009EDA;
-	--fond-vert : #4BB249;
-	--fond-jaune : #F1CB29;
-	--fond-orange : #DA6241;
-	--fond-rouge: #D12625;
 
 	/*--cpu-focus-color : #111;*/
 
@@ -601,7 +601,7 @@ ul ul, ul ol, ol ol, ol ul {
 	padding-top: 2em;
 	background: var(--background-sidebar) /*url(var(--background-img))*/;
 	color: var(--link-side);
-	text-shadow: var(--color-neutral) 0px -1px 0px; 
+	/* text-shadow: var(--color-neutral) 0px -1px 0px; */
 	flex: 0 0 33%;
 }
 
@@ -620,7 +620,7 @@ ul ul, ul ol, ol ol, ol ul {
 .widgets {
 	h3, h4 {
 		font-size: 1em;
-		color: white;
+		color: var(--color-neutral);
 		font-weight: bold;
 	}
 
@@ -639,7 +639,7 @@ ul ul, ul ol, ol ol, ol ul {
 
 	a:link, a:visited {
 		/** TODO use a global CSS var  **/
-		color: white;
+		/*color: var();*/
 		border: none;
 	}
 	/* .sidebar .serie-current, */
