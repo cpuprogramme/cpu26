@@ -26,7 +26,7 @@ $this->registerModule(
 								# Widget rendering
 								'widgetcontainerformat' => '<details class="%1$s" %2$s>%3$s</details>',
 								'widgettitleformat' => '<summary><h3>%s</h3></summary>', # Needed to force widgets to use h3 
-								'widgetsubtitleformat'  => '<summary><h3>%s</h3></summary>',
+								'widgetsubtitleformat'  => '<h4>%s</h4>',
 /*
         'widgettitleformat'     => '', // formatage de widget (optionnel)
         'widgetsubtitleformat'  => '', // formatage de widget (optionnel)

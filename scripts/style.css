@@ -288,10 +288,6 @@ input[type="radio"] {
 	border: none; }
 
 input[type="search"] {
-	/*
-	-webkit-appearance: textfield; 
-	appearance: textfield; 
-	*/
 	-webkit-appearance: none;
 	appearance: none; 
 }
@@ -346,9 +342,8 @@ details {
 	}
 }
 
-details/*:open*/::details-content {
-	border-left :  2px solid green;
-	margin-left : 5px;
+details::details-content {
+	margin-left : var(--cpu-font-size);
 }
 
 
