@@ -1,7 +1,8 @@
 DONE
 ----
  - passer en dotclear moderne
- - virer l'autoplay du cpu-audio : trop pénible.
+ - mettre les images d'illustrations e nvignette plutôt qu'en fond de texte
+ - virer l'autoplay du cpu-audio : trop pénible
  - breadcrumb à tous les étages
  - banner incluant pré-écoutes
  - navigation en sidebar dépliables
@@ -10,6 +11,9 @@ DONE
 TODO
 ----
 
+ - texte du hover sur cpu audio
+ - uniformiser le padding left des éléments en sidebar
+ - stylier les boutons de formulaire (pas d'arrondi, plus de padding horizontal)
  - dans les banner players, déplacer le player audio sous l'image et le titre en petite largeur
  - insérer le logo de la radio en svg ?
  - tester avec une page info en une  
