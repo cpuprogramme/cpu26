@@ -67,7 +67,6 @@ body/*:root*/ {
 	--h2-factor : 3;
 	--h3-factor : 2;
 
-
 	--fond-bleu : #009EDA;
 	--fond-vert : #4BB249;
 	--fond-jaune : #F1CB29;
@@ -88,7 +87,7 @@ body/*:root*/ {
 	--cpu-color : var(--link);
 	--cpu-playing-background : var(--background-sidebar);
 	--cpu-playing-color : var(--link-focus);
-	--cpu-focus-background : var(--background);
+	--cpu-focus-background : var(--calque-out);
 	--cpu-focus-color : var(--link-focus);
 	--cpu-error-background : #a00 ;
 	--cpu-error-color : #ff7 ;

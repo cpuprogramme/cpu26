@@ -11,7 +11,6 @@ DONE
 TODO
 ----
 
- - texte du hover sur cpu audio
  - uniformiser le padding left des éléments en sidebar
  - stylier les boutons de formulaire (pas d'arrondi, plus de padding horizontal)
  - dans les banner players, déplacer le player audio sous l'image et le titre en petite largeur
