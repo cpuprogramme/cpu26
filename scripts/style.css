@@ -1022,13 +1022,13 @@ menu, menu ul {
 	padding : 0;
 	margin : 0;
 	width : 100%;
-	& li {
+	li {
 		flex : 1 0 auto;
 		list-style : none;
 		overflow:hidden;
 		vertical-align : middle;
 
-		& a {
+		a {
 			display : block;
 			width : 100%;
 			padding : 4px;
@@ -1039,7 +1039,7 @@ menu, menu ul {
 			text-decoration : none;
 		}
 
-		& a:hover, & a:focus {
+		a:hover, a:focus {
 			color : black;
 			background : white
 		}
