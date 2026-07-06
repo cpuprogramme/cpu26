@@ -1,6 +1,7 @@
 #!/bin/bash
 
 scss -t compressed scripts/style.css style.css
+echo "ça marche pas ? passer par cssnano https://cssnano.github.io/cssnano/playground/"
 
 java -jar /usr/share/java/closure-compiler.jar \
     --compilation_level SIMPLE_OPTIMIZATIONS \
