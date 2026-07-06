@@ -622,8 +622,7 @@ ul ul, ul ol, ol ol, ol ul {
 	width: 1px; }
 
 
-.blognav__widgets,
-.blogextra__widgets {
+.widgets {
 	h3, h4 {
 		font-size: 1em;
 		color: white;
@@ -664,7 +663,7 @@ ul ul, ul ol, ol ol, ol ul {
 		& > ul {
 			list-style: none;
 			padding-left: 0; 
-			& li {
+			li {
 				list-style-image: none;
 				list-style-type: none;
 				margin-left: 0; 
@@ -1261,15 +1260,7 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 .only-small {
 	display : none;
 }
-.not-small {
-	display : inline;
-}
 
-
-/*
-.dc-page .post-date  {
-	display : none;
-}
 
 */
 .dc-page .encloser {
