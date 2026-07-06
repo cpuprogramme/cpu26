@@ -88,7 +88,7 @@ body/*:root*/ {
 	--cpu-color : var(--link);
 	--cpu-playing-background : var(--background-sidebar);
 	--cpu-playing-color : var(--link-focus);
-	--cpu-focus-background : var(--background-neutral);
+	--cpu-focus-background : var(--background);
 	--cpu-focus-color : var(--link-focus);
 	--cpu-error-background : #a00 ;
 	--cpu-error-color : #ff7 ;
@@ -1581,7 +1581,7 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 
 	}
 
-	#blogextra  details::details-content {
+	#blogextra details::details-content, details.series-posts::details-content {
 		content-visibility: visible;
 	}
 }
