@@ -64,7 +64,7 @@ body/*:root*/ {
 	--background-main : #fff;
 	--background-comment : #eff;
 	--link : #00a;
-	--link-focus : #f9f9f9;
+	--link-focus : #00f;
 	--link-side : black;
 	--background-link-side : #11f0f0;
 	--quote : #626262;
@@ -691,16 +691,17 @@ ul ul, ul ol, ol ol, ol ul {
 	width: 60%; }
 
 .series-posts .current {
-	background-color: black;
+	background-color: var(--background-main);
 	padding: .25em;
 }
 
 .category-current {
 	margin-left: -2em;
-	background-color: black; }
+	background-color: var(--background-main); }
 
 .category-current ul {
-	background-color: var(--color-neutral); }
+	background-color: var(--color-neutral);
+}
 
 
 /* *** navigation *** */
@@ -1073,7 +1074,7 @@ menu, menu ul {
 	align-items: center;
 	min-width: 100%;
 	min-height: 64px;
-	background: #555;
+	background: var(--background-item);
 }
 
 #header-control cpu-controller {
