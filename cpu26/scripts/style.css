@@ -872,7 +872,7 @@ ul ul, ul ol, ol ol, ol ul {
 	margin-right: 1em;
 	margin-top: -.5em;
 	border-radius: 50%;
-	background-color: var(----background-main);
+	background-color: var(--background-main);
 	z-index: 1000;
 	line-height: 2.5em;
 	text-align: center; }
