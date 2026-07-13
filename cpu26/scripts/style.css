@@ -6,8 +6,8 @@
 	font-style: normal;
 	font-weight: 400;
 	src: local('Roboto Condensed'), local('RobotoCondensed-Regular'),
-	url(/themes/cpu26/fonts/RobotoCondensed-Regular.woff2) format('woff2'),
-	url(/themes/cpu26/fonts/RobotoCondensed-Regular.ttf) format('truetype');
+	url('/themes/cpu26/fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+	url('/themes/cpu26/fonts/RobotoCondensed-Regular.ttf') format('truetype');
 	font-display : fallback;
 }
 @font-face {
@@ -15,8 +15,8 @@
 	font-style: normal;
 	font-weight: 700;
 	src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'),
-	url(/themes/cpu26/fonts/RobotoCondensed-Bold.woff2) format('woff2'),
-	url(/themes/cpu26/fonts/RobotoCondensed-Bold.ttf) format('truetype');
+	url('/themes/cpu26/fonts/RobotoCondensed-Bold.woff2') format('woff2'),
+	url('/themes/cpu26/fonts/RobotoCondensed-Bold.ttf') format('truetype');
 	font-display : fallback;
 }
 @font-face {
@@ -24,8 +24,8 @@
 	font-style: italic;                                            
 	font-weight: 400;                                              
 	src: local('Roboto Condensed Italic'), local('RobotoCondensed-Italic'),
-	url(/themes/cpu26/fonts/RobotoCondensed-Italic.woff2) format('woff2'),
-	url(/themes/cpu26/fonts/RobotoCondensed-Italic.ttf) format('truetype');
+	url('/themes/cpu26/fonts/RobotoCondensed-Italic.woff2') format('woff2'),
+	url('/themes/cpu26/fonts/RobotoCondensed-Italic.ttf') format('truetype');
 	font-display : fallback;
 }
 
@@ -34,8 +34,8 @@
 	font-style: italic;
 	font-weight: 700;
 	src: local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'),
-	url(/themes/cpu26/fonts/RobotoCondensed-BoldItalic.woff2) format('woff2'),
-	url(/themes/cpu26/fonts/RobotoCondensed-BoldItalic.ttf) format('truetype');
+	url('/themes/cpu26/fonts/RobotoCondensed-BoldItalic.woff2') format('woff2'),
+	url('/themes/cpu26/fonts/RobotoCondensed-BoldItalic.ttf') format('truetype');
 	font-display : fallback;
 }
 
@@ -60,7 +60,7 @@ body/*:root*/ {
 	--background-sidebar : #ddd;
 	--background-item : #ccc;
 	--color-neutral : #222;
-	--background-img : url(/themes/cpu26/img/background_graphy-light.png);
+	--background-img : url('/themes/cpu26/img/background_graphy-light.png');
 	--background-main : #fff;
 	--background-comment : #eff;
 	--link : #00a;
@@ -496,10 +496,10 @@ ul ul, ul ol, ol ol, ol ul {
 	padding-right: .5em; }
 
 .post-cat {
-	background-image: url(/themes/cpu26/img/icon_category.png); }
+	background-image: url('/themes/cpu26/img/icon_category.png'); }
 
 .post-tags-list {
-	background-image: url(/themes/cpu26/img/icon_tags.png);
+	background-image: url('/themes/cpu26/img/icon_tags.png');
 	padding-left: 22px !important; }
 
 
@@ -810,8 +810,8 @@ ul ul, ul ol, ol ol, ol ul {
 	box-shadow: 0 2px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.2); }
 
 .post-attachments:before {
-	content: url(/themes/cpu26/img/icon_attachments.png);
-	content: url(/themes/cpu26/img/icon_attachments.svg);
+	content: url('/themes/cpu26/img/icon_attachments.png');
+	content: url('/themes/cpu26/img/icon_attachments.svg');
 	display: block;
 	position: absolute;
 	margin-top: -.33em;
