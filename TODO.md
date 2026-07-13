@@ -9,6 +9,7 @@ DONE
  - navigation en sidebar dépliables
  - commentaire en pop-up
  - en cas de recherche infrustueuse, proposer des suggestions : tags, séries, catégories, etc
+ - changer le NDD Change base URL to cpu.pm
 
 TODO
 ----
