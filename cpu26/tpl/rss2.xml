@@ -78,6 +78,10 @@
 	<podcast:social platform="mastodon" url="https://mastodon.tetaneutral.net/@cpu" name="Mastodon">@cpu@Mastodon.tetaneutral.net</podcast:social>
 	<podcast:social platform="linkedin" url="https://linkedin.com/company/cpuprogramme" name="LinkedIn">Linkedin CPU</podcast:social>
 
+	<itunes:owner>
+		<itunes:email>annonces@cpu.pm</itunes:email>
+		<itunes:name>dascritch &amp; associés pour Radio FMR</itunes:name>
+	</itunes:owner>
 
 	{{tpl:EpisodeCountReset}}
 	<tpl:Entries lastn="0">
@@ -85,6 +89,7 @@
 			<title>{{tpl:EntryTitle encode_xml="1"}}</title>
 			<link>{{tpl:EntryURL}}</link>
 			<dc:creator>{{tpl:EntryAuthorCommonName encode_xml="1"}}</dc:creator>
+
 			<itunes:author>{{tpl:EntryAuthorCommonName encode_xml="1"}}</itunes:author>
 			<pubDate>{{tpl:EntryDate rfc822="1"}}</pubDate>
 			<guid isPermaLink="false">{{tpl:EntryFeedID}}</guid>
@@ -98,6 +103,13 @@
 				<tpl:EntrySeries>Cette release fait partie de la série “{{tpl:SerieID}}”.</tpl:EntrySeries>
 				{{tpl:EntryContent remove_html="1" encode_xml="1" cut_string="250"}}…
 			</description>
+			<itunes:subtitle>
+				La documentation et les liens de cette émission sont sur http://cpu.pm/{{tpl:EpisodeNumber}} .
+				<tpl:EntrySeries>Cette release fait partie de la série “{{tpl:SerieID}}”.</tpl:EntrySeries>
+			</itunes:subtitle>
+			<itunes:summary>
+				{{tpl:EntryContent remove_html="1" encode_xml="1" cut_string="250"}}…
+			</itunes:summary>
 			<tpl:EpisodeCountLowerThan number="100">
 				<content:encoded><![CDATA[
 					<tpl:EntrySeries>
@@ -180,6 +192,12 @@
 			</tpl:Attachments>
 			<itunes:explicit>no</itunes:explicit>
 			<itunes:episodeType>Trailer</itunes:episodeType>
+			<itunes:subtitle>
+				Bande-annonce de CPU, l'émission Carré Petit Utile de radio FMR. Tous les Jeudi à 11h et sur https://cpu.pm.
+			</itunes:subtitle>
+			<itunes:summary>
+				Bande-annonce de CPU, l'émission Carré Petit Utile de radio FMR. Tous les Jeudi à 11h et sur https://cpu.pm.
+			</itunes:summary>
 		</item>
 	</tpl:Entries>
 
