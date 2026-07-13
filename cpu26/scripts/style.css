@@ -1508,11 +1508,15 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 		padding-right: 1em;
 		box-sizing: border-box;
 		word-wrap: break-word;
-
 	}
 
 	#blogextra details::details-content, details.series-posts::details-content {
 		content-visibility: visible;
+	}
+	#blogextra details, details.series-posts {
+		summary::marker {
+			content : "" !important;
+		}
 	}
 }
 @media screen and (min-width: 2001px) {
@@ -1553,6 +1557,9 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 
 		details::details-content {
 			content-visibility: visible;
+		}
+		summary::marker {
+			content : "" !important;
 		}
 	} 
 		
