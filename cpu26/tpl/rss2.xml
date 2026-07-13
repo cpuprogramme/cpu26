@@ -74,8 +74,9 @@
 	<lastBuildDate>{{tpl:BlogUpdateDate rfc822="1"}}</lastBuildDate>
 	<pubDate>{{tpl:BlogUpdateDate rfc822="1"}}</pubDate>
 
-	<podcast:social platform="twitter" url="https://twitter.com/cpuprogramme" name="Twitter">CPUprogramme</podcast:social>
-	<podcast:social platform="facebook.page" url="https://www.facebook.com/programmecpu" name="Page facebook">Programme CPU</podcast:social>
+	<podcast:social platform="bluesky" url="https://bsky.app/profile/cpu.pm" name="BlueSky">@cpu.pm</podcast:social>
+	<podcast:social platform="mastodon" url="https://mastodon.tetaneutral.net/@cpu" name="Mastodon">@cpu@Mastodon.tetaneutral.net</podcast:social>
+	<podcast:social platform="linkedin" url="https://linkedin.com/company/cpuprogramme" name="LinkedIn">Linkedin CPU</podcast:social>
 
 
 	{{tpl:EpisodeCountReset}}
