@@ -1,0 +1,23 @@
+<div class="sidebar" id="sidebar" role="complementary">
+	<tpl:IfWidgets type="nav">
+		<nav class="widgets blognav__widgets" id="blognav">
+			<div class="widget">
+				<form action="/" method="get" role="search">
+				<h3><label for="q" id="search">Chercher avec un mot</label></h3>
+					<fieldset>
+						<p id="searchbox"><input maxlength="255" name="q" id="q" value="" type="search" placeholder="Développement, matériel,…" /><button type="submit">ok</button></p>
+					</fieldset>
+				</form>
+			</div>
+			{{tpl:Widgets type="nav"}}
+		</nav>
+	</tpl:IfWidgets>
+	<tpl:IfWidgets type="extra">
+		<aside class="widgets blogextra__widgets" id="blogextra">
+				<tpl:Entries no_context="1" category="Teaser" lastn="1" selected="1" ignore_pagination="1">
+					{{tpl:include src="_entry-minimal.html"}}
+				</tpl:Entries>
+			{{tpl:Widgets type="extra"}}
+		</aside>
+	</tpl:IfWidgets>
+</div>

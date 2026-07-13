@@ -1,0 +1,81 @@
+<article class="post simple" id="p{{tpl:EntryID}}" role="article">
+
+	<header class="full banner-article {{tpl:EntryCategoryColorClass}}">
+		<div class="encloser">
+			{{tpl:include src="_entry-illustration.html"}}
+
+			<div>
+				<h2 class="post-title">{{tpl:EntryTitle encode_html="1"}}</h2>
+
+				<p class="post-info">
+							<span class="post-date">{{tpl:EntryDate}}. </span>
+						<tpl:EntryIf has_category="1">
+							<span class="post-cat"><tpl:EntryCategoriesBreadcrumb><a
+							href="{{tpl:CategoryURL}}">{{tpl:CategoryTitle encode_html="1"}}</a> › </tpl:EntryCategoriesBreadcrumb><a
+							href="{{tpl:EntryCategoryURL}}">{{tpl:EntryCategory encode_html="1"}}</a></span>
+						</tpl:EntryIf>
+
+						<tpl:EntrySeries>
+							› <a href="{{tpl:SerieURL}}">série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a>
+						</tpl:EntrySeries>
+				</p>
+
+				<tpl:EntryTags>
+					<tpl:TagsHeader>
+						<ul class="post-tags-list">
+					</tpl:TagsHeader>
+						<li class="post-tags-item"><a href="{{tpl:TagURL}}">{{tpl:TagID}}</a></li>
+					<tpl:TagsFooter>
+						</ul>
+					</tpl:TagsFooter>
+				</tpl:EntryTags>
+
+		</div>
+
+		<!-- # --BEHAVIOR-- publicEntryBeforeContent -->
+		{{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
+		
+	</div>
+	<tpl:Attachments>
+		<tpl:AttachmentIf is_mp3="1">
+			{{tpl:include src="_mp3_player.html"}}
+		</tpl:AttachmentIf>
+	</tpl:Attachments>
+</header>
+		
+	<div class="post-content">{{tpl:EntryContent}}</div>
+
+	<!-- # --BEHAVIOR-- publicEntryAfterContent -->
+	{{tpl:SysBehavior behavior="publicEntryAfterContent"}}
+
+
+	{{tpl:include src="_entry-feedback.html"}}
+
+
+<tpl:Attachments>
+	<tpl:AttachmentsHeader>
+	<aside class="post-attachments" id="attachments">
+	<h3 id="pieces_jointes" class="notsobig">Pièces jointes</h3>
+		<ul class="post-attachments-list">
+	</tpl:AttachmentsHeader>
+		<li class="post-attachments-item {{tpl:AttachmentType}}">
+			<a href="{{tpl:AttachmentURL}}" title="{{tpl:AttachmentFileName}} ({{tpl:AttachmentSize}})">{{tpl:AttachmentTitle}}</a>
+		</li>
+	<tpl:AttachmentsFooter>
+		</ul>
+	</aside>
+	</tpl:AttachmentsFooter>
+</tpl:Attachments>
+
+</article>
+
+<tpl:EntrySeries>
+	<aside id="same_serie">
+		<h3 id="serie" class="notsobig">Cette <em lang="en">release</em> est dans <a href="{{tpl:SerieURL}}">la série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a></h3>
+		<ul>
+			<tpl:Entries order="asc">
+				<li><strong><a href="{{tpl:EntryURL}}">{{tpl:EntryTitle}}</a></strong></li>
+			</tpl:Entries>
+		</ul>
+	</aside>
+</tpl:EntrySeries>

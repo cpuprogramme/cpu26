@@ -1,0 +1,41 @@
+<article id="p{{tpl:EntryID}}" class="post full banner-article banner-link fond_rouge" role="article">
+
+	<a class="encloser" href="{{tpl:EntryURL}}">
+		{{tpl:include src="_entry-illustration.html"}}
+
+		<div>
+			<p>
+				<span class="not-small">Précédente émission </span>diffusée le <time datetime="{{tpl:EntryDate iso8601="1"}}">{{tpl:EntryDate}}</time>
+				<tpl:EntrySeries>
+					<span class="not-small">dans la série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</span>
+				</tpl:EntrySeries>
+			</p>
+
+			<h3 class="post-title verybig">{{tpl:EntryTitle encode_html="1"}}</h3>
+
+			<p class="post-meta not-small">
+
+				<tpl:EntryTags>
+					<tpl:TagsHeader>
+						thèmes : 
+						<ul class="post-tags-list">
+					</tpl:TagsHeader>
+						<li class="post-tags-item"><a href="{{tpl:TagURL}}">{{tpl:TagID}}</a></li>
+					<tpl:TagsFooter>
+						</ul>
+					</tpl:TagsFooter>
+				</tpl:EntryTags>
+
+			</p>
+		</div>
+	</a>
+
+	<tpl:EntryIf has_attachment="1">
+		<tpl:Attachments>
+			<tpl:AttachmentIf is_mp3="1">
+				{{tpl:include src="_mp3_player_chapters.html"}}
+			</tpl:AttachmentIf>
+		</tpl:Attachments>
+	</tpl:EntryIf>
+
+</article>

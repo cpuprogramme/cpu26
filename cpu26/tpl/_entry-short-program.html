@@ -1,0 +1,24 @@
+<article id="p{{tpl:EntryID}}" class="post short banner-article" role="article" style="background-image:url({{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}})">
+
+	<h3 class="post-title"><a href="{{tpl:EntryURL}}">{{tpl:EntryTitle encode_html="1"}}</a></h3>
+
+	<div class="post-meta">
+		<p class="post-info">
+			<span class="post-date">{{tpl:EntryDate}}</span>
+			<tpl:EntrySeries>
+				, <a href="{{tpl:SerieURL}}">série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a>
+			</tpl:EntrySeries>
+		</p>
+
+		<tpl:EntryTags>
+			<tpl:TagsHeader>
+				<ul class="post-tags-list">
+			</tpl:TagsHeader>
+				<li class="post-tags-item"><a href="{{tpl:TagURL}}">{{tpl:TagID}}</a></li>
+			<tpl:TagsFooter>
+				</ul>
+			</tpl:TagsFooter>
+		</tpl:EntryTags>
+
+	</div>
+</article>

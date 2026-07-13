@@ -1,0 +1,16 @@
+<article class="post minimal img-on-right entry-series banner-article banner-link" role="article">
+	<a class="encloser" href="{{tpl:SerieURL}}">
+		<!--- créer sur l'image un epilement de pochettes -->
+		{{tpl:include src="_entry-illustration.html"}}
+	   
+		<div>
+			<h3 class="post-title">
+				{{tpl:SerieID encode_html="1"}}
+			</h3>
+			<div class="post-meta not-small center">
+				{{tpl:CountEntriesInSeries none="prochainement" one="un seul épisode" more="%s épisodes"}}
+			</div>
+		</div>
+	</a>
+
+</article>

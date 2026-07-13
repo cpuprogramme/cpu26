@@ -1,0 +1,129 @@
+{{tpl:extends parent="__layout.html"}}
+
+<tpl:Block name="head-title">
+	<title>{{tpl:CategoryTitle encode_html="1"}} - {{tpl:BlogName encode_html="1"}}<tpl:PaginationIf start="0"> - {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf></title>
+</tpl:Block>
+
+<tpl:Block name="meta-entry">
+	<meta name="description" lang="{{tpl:BlogLanguage}}" content="{{tpl:CategoryDescription encode_html="1" cut_string="180" remove_html="1"}}" />
+	<meta name="author" content="{{tpl:BlogEditor encode_html="1"}}" />
+	<meta name="date" content="{{tpl:BlogUpdateDate iso8601="1"}}" />
+</tpl:Block>
+
+<tpl:Block name="dc-entry">
+	<meta property="dc.title" lang="{{tpl:BlogLanguage}}" content="{{tpl:CategoryTitle encode_html="1"}} - {{tpl:BlogName encode_html="1"}}<tpl:PaginationIf start="0"> - {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf>" />
+	<meta property="dc.description" lang="{{tpl:BlogLanguage}}" content="{{tpl:CategoryDescription remove_html="1"}}" />
+	<meta property="dc.language" content="{{tpl:BlogLanguage}}" />
+	<meta property="dc.date" content="{{tpl:BlogUpdateDate iso8601="1"}}" />
+</tpl:Block>
+
+<tpl:Block name="head-linkrel">
+	<link rel="top" href="{{tpl:BlogURL}}" title="{{tpl:lang Home}}" />
+	<link rel="contents" href="{{tpl:BlogArchiveURL}}" title="{{tpl:lang Archives}}" />
+
+	<tpl:Entries no_content="1">
+		<tpl:EntriesHeader>
+			<tpl:Pagination>
+				<tpl:PaginationIf end="0">
+					<link rel="prev" title="{{tpl:lang previous entries}}" href="{{tpl:PaginationURL offset="1"}}" />
+				</tpl:PaginationIf>
+
+				<tpl:PaginationIf start="0">
+					<link rel="next" title="{{tpl:lang next entries}}" href="{{tpl:PaginationURL offset="-1"}}" />
+				</tpl:PaginationIf>
+			</tpl:Pagination>
+		</tpl:EntriesHeader>
+
+		<link rel="chapter" href="{{tpl:EntryURL}}" title="{{tpl:EntryTitle encode_html="1"}}" />
+	</tpl:Entries>
+
+	<meta property="og:title" content="{{tpl:CategoryTitle encode_html="1"}}" />
+	<meta property="og:image" content="https://cpu.dascritch.net/assets/apple-touch-icon.png" />
+	<meta property="og:description" content="Catégories de chroniques dans CPU" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="{{tpl:CategoryTitle encode_html="1"}} : chroniques dans CPU" />
+	<meta name="twitter:image" content="https://cpu.dascritch.net/assets/apple-touch-icon.png"/>
+	<meta name="twitter:site" content="@CPUprogramme" />
+	<meta name="twitter:creator" content="@CPUprogramme" />
+
+</tpl:Block>
+
+<tpl:Block name="body-tag"><body class="dc-category"></tpl:Block>
+
+<tpl:Block name="main-content">
+
+	<nav>
+		<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li class="not-small" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:BlogURL}}" aria-label="Revenir à la page de garde" itemprop="item">
+					<span itemprop="name">CPU</span>
+				</a>
+				<meta itemprop="position" content="1">
+			</li>
+			<li aria-hidden="true">⬜</li>
+
+			<tpl:CategoryParents>
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:CategoryURL}}" itemprop="item">
+						<span itemprop="name">{{tpl:CategoryTitle encode_html="1"}}</span>	
+					</a>
+				<meta itemprop="position" content="2">
+			</li>
+			<li class="not-small" aria-hidden="true">›</li>
+			</tpl:CategoryParents>
+
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:CategoryURL}}" itemprop="item">
+					<span itemprop="name">{{tpl:CategoryTitle encode_html="1"}}</span>
+				</a>
+				<meta itemprop="position" content="3">
+			</li>
+			<li class="not-small" aria-hidden="true">›</li>
+
+			<li class="spacer" aria-hidden="true"></li>
+
+				<tpl:Entries no_content="1" lastn="1" category="#self ?sub" no_context="1">
+					<li class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
+						{{tpl:include src="_pagination.html"}}
+					</li>
+				</tpl:Entries>
+		</ul>
+	</nav>
+
+	<header>
+		<h2>
+			{{tpl:CategoryTitle encode_html="1"}}
+		</h2>
+
+		<div class="content-info__cat-desc  no-images">
+			{{tpl:CategoryDescription}}
+		</div>
+	</header>
+
+
+		<tpl:CategoryFirstChildren>
+			<tpl:CategoriesHeader>
+				<div id="subcategories" class="content-info__sub-cat">
+					<h3>Filtres dans les chroniques</h3>
+					<ul>
+			</tpl:CategoriesHeader>
+						<li class="post-cat"><a href="{{tpl:CategoryURL}}">{{tpl:CategoryTitle encode_html="1"}}</a></li>
+			<tpl:CategoriesFooter>
+					</ul>
+				</div>
+			</tpl:CategoriesFooter>
+		</tpl:CategoryFirstChildren>
+
+	<div class="content-inner">
+		<tpl:Entries category="#self ?sub" no_context="1">
+
+			{{tpl:include src="_entry-short-player.html"}}
+
+			<tpl:EntriesFooter>
+			<p class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
+				{{tpl:include src="_pagination.html"}}
+			</p>
+			</tpl:EntriesFooter>
+		</tpl:Entries>
+	</div> <!-- End #content-inner -->
+</tpl:Block>

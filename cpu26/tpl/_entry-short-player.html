@@ -1,0 +1,40 @@
+<article id="p{{tpl:EntryID}}" class="post short banner-article  banner-link posts-listed {{tpl:EntryCategoryColorClass}}" role="article">
+
+	<div class="encloser">
+		<!-- manque le lien sur l'illus -->
+		{{tpl:include src="_entry-illustration.html"}}
+		<div>
+			<a href="{{tpl:EntryURL}}">
+				<h3 class="post-title">{{tpl:EntryTitle encode_html="1"}}</h3>
+
+				<p class="post-info">
+					<span class="post-date">{{tpl:EntryDate}}.</span>
+					<tpl:EntryIf has_category="1">
+					<span class="post-cat"><tpl:EntryCategoriesBreadcrumb>{{tpl:CategoryTitle encode_html="1"}} › </tpl:EntryCategoriesBreadcrumb>{{tpl:EntryCategory encode_html="1"}}</span>
+					</tpl:EntryIf>
+					<tpl:EntrySeries>
+						 › {{tpl:SerieID}}
+					</tpl:EntrySeries>
+				</p>
+
+				<tpl:EntryTags>
+					<tpl:TagsHeader>
+						<ul class="post-tags-list">
+					</tpl:TagsHeader>
+						<li class="post-tags-item">{{tpl:TagID}}</li>
+					<tpl:TagsFooter>
+						</ul>
+					</tpl:TagsFooter>
+				</tpl:EntryTags>
+			</a>
+
+			<tpl:EntryIf>
+				<tpl:Attachments>
+					<tpl:AttachmentIf is_mp3="1">
+						{{tpl:include src="_mp3_player_no_preload.html"}}
+					</tpl:AttachmentIf>
+				</tpl:Attachments>
+			</tpl:EntryIf>
+		</div>
+	</div>
+</article>

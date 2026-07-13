@@ -1,0 +1,106 @@
+{{tpl:extends parent="__layout.html"}}
+<tpl:Block name="head-title">
+	<title>{{tpl:lang Search}} - {{tpl:SysSearchString encode_html="1"}} - {{tpl:BlogName encode_html="1"}}<tpl:PaginationIf start="0"> - {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf>
+	</title>
+</tpl:Block>
+<tpl:Block name="meta-robots">
+	<meta name="ROBOTS" content="{{tpl:BlogMetaRobots robots="NOINDEX,NOARCHIVE"}}" />
+</tpl:Block>
+<tpl:Block name="head-linkrel">
+	<link rel="contents" href="{{tpl:BlogArchiveURL}}" title="{{tpl:lang Archives}}" />
+	<tpl:Entries no_content="1">
+		<tpl:EntriesHeader>
+			<tpl:Pagination>
+				<tpl:PaginationIf end="0">
+					<link rel="prev" title="{{tpl:lang previous entries}}" href="{{tpl:PaginationURL offset="1"}}" />
+				</tpl:PaginationIf>
+				<tpl:PaginationIf start="0">
+					<link rel="next" title="{{tpl:lang next entries}}" href="{{tpl:PaginationURL offset="-1"}}" />
+				</tpl:PaginationIf>
+			</tpl:Pagination>
+		</tpl:EntriesHeader>
+		<link rel="chapter" href="{{tpl:EntryURL}}" title="{{tpl:EntryTitle encode_html="1"}}" />
+	</tpl:Entries>
+	<link rel="meta" type="application/xbel+xml" title="Blogroll" href="{{tpl:BlogrollXbelLink}}" />
+</tpl:Block>
+<tpl:Block name="body-tag">
+
+	<body class="dc-search">
+</tpl:Block>
+<tpl:Block name="main-content">
+
+
+	<nav>
+		<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li class="not-small" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:BlogURL}}" aria-label="Revenir à la page de garde" itemprop="item">
+					<span itemprop="name">CPU</span>
+				</a>
+				<meta itemprop="position" content="1">
+			</li>
+			<li aria-hidden="true">⬜</li>
+
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="#search" itemprop="item">
+						<span itemprop="name">Recherche</span>	
+					</a>
+				<meta itemprop="position" content="2">
+			</li>
+			<li class="not-small" aria-hidden="true">›</li>
+
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="/?q={{tpl:SysSearchString encode_html="1" string="%1$s"}}" itemprop="item">
+					<span itemprop="name"><q>{{tpl:SysSearchString encode_html="1" string="%1$s"}}</q></span>
+				</a>
+				<meta itemprop="position" content="3">
+			</li>
+			<li class="not-small" aria-hidden="true">›</li>
+
+			<li class="spacer" aria-hidden="true"></li>
+
+			<tpl:SysIf search_count="&gt;0">
+				<tpl:Entries no_content="1" lastn="1">
+					<li class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
+						{{tpl:include src="_pagination.html"}}
+					</li>
+				</tpl:Entries>
+			</tpl:SysIf>
+			
+		</ul>
+	</nav>
+
+	<header>
+		<h2>{{tpl:lang Search}} <q>{{tpl:SysSearchString encode_html="1" string="%1$s"}}</q></h2>
+		<div>
+			<tpl:SysIf search_count="==0">
+				<p>{{tpl:SysSearchString encode_html="1" string="Your search for <q>%1$s</q> returned no result."}}</p>
+			</tpl:SysIf>
+			<tpl:SysIf search_count="==1">
+				<p>{{tpl:SysSearchString encode_html="1" string="Your search for <q>%1$s</q> returned <strong>%2$s</strong> result."}}</p>
+			</tpl:SysIf>
+			<tpl:SysIf search_count="&gt;1">
+				<p>{{tpl:SysSearchString encode_html="1" string="Your search for <q>%1$s</q> returned <strong>%2$s</strong> results."}}</p>
+			</tpl:SysIf>
+		</div>
+	</header>
+
+
+	<div class="content-inner">
+
+		<tpl:SysIf search_count="==0">
+			{{tpl:include src="_search_empty.html"}}
+		</tpl:SysIf>
+
+		<tpl:Entries>
+		
+			{{tpl:include src="_entry-short-player.html"}}
+			<tpl:EntriesFooter>
+				<tpl:Pagination>
+					<p class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
+						{{tpl:include src="_pagination.html"}}
+					</p>
+				</tpl:Pagination>
+			</tpl:EntriesFooter>
+		</tpl:Entries>
+	</div> <!-- End #content-inner -->
+</tpl:Block>

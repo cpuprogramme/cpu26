@@ -1,0 +1,41 @@
+{{tpl:extends parent="post.html"}}
+<tpl:Block name="head-linkrel">
+	<link rel="contents" href="{{tpl:BlogArchiveURL}}" title="{{tpl:lang Archives}}">
+	<tpl:EntryIf pings_active="1">
+		<link rel="pingback" href="{{tpl:BlogXMLRPCURL}}">
+		<link rel="webmention" href="{{tpl:BlogWebmentionURL}}">
+	</tpl:EntryIf>
+	<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{tpl:BlogFeedURL type="atom"}}">
+</tpl:Block>
+<tpl:Block name="body-tag">
+
+	<body class="dc-page">
+</tpl:Block>
+
+<tpl:Block name="main-content">
+
+	<header id="p{{tpl:EntryID}}" class="post full banner-article fond_bleu" role="article">
+		<div class="encloser">
+			<h2 class="post-title">{{tpl:EntryTitle encode_html="1"}}</h2>
+			<!-- # --BEHAVIOR-- publicEntryBeforeContent -->
+		</div>
+		<tpl:Attachments>
+			<tpl:AttachmentIf is_mp3="1">
+				{{tpl:include src="_mp3_player.html"}}
+			</tpl:AttachmentIf>
+		</tpl:Attachments>
+
+	</header>
+
+	{{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
+	<tpl:EntryIf extended="1">
+		<div class="post-excerpt">{{tpl:EntryExcerpt}}</div>
+	</tpl:EntryIf>
+	<div class="post-content">{{tpl:EntryContent}}</div>
+	<!-- # --BEHAVIOR-- publicEntryAfterContent -->
+	{{tpl:SysBehavior behavior="publicEntryAfterContent"}}
+
+
+	{{tpl:include src="_entry-feedback.html"}}
+
+</tpl:Block>
