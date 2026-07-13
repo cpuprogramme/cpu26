@@ -44,7 +44,7 @@
 
 	<podcast:locked>yes</podcast:locked>
 
-	<media:thumbnail url="https://cpu.pm/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
+	<media:thumbnail url="https://cpu.pm/themes/cpu26/assets/cpu_logo_exagerement_gros_pour_apple.png" />
 	<media:rating>nonadult</media:rating>
 	<itunes:explicit>no</itunes:explicit>
 	<googleplay:explicit>no</googleplay:explicit>
@@ -53,14 +53,14 @@
 	<itunes:type>episodic</itunes:type>
 
 	<image>
-		<url>https://cpu.pm/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png</url>
+		<url>https://cpu.pm/themes/cpu26/assets/cpu_logo_exagerement_gros_pour_apple.png</url>
 		<title>{{tpl:BlogName encode_xml="1"}}</title>
 		<link>{{tpl:BlogURL}}</link>
 	</image>
-	<itunes:image href="https://cpu.pm/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
-	<googleplay:image href="https://cpu.pm/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
-	<podcast:imageLarge>https://cpu.pm/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png</podcast:imageLarge>
-	<podcast:imageMedium>https://cpu.pm/themes/cpu-15/assets/android-chrome-512x512.png</podcast:imageMedium>
+	<itunes:image href="https://cpu.pm/themes/cpu26/assets/cpu_logo_exagerement_gros_pour_apple.png" />
+	<googleplay:image href="https://cpu.pm/themes/cpu26/assets/cpu_logo_exagerement_gros_pour_apple.png" />
+	<podcast:imageLarge>https://cpu.pm/themes/cpu26/assets/cpu_logo_exagerement_gros_pour_apple.png</podcast:imageLarge>
+	<podcast:imageMedium>https://cpu.pm/themes/cpu26/assets/android-chrome-512x512.png</podcast:imageMedium>
 	<podcast:imageSmall>https://cpu.pm/assets/apple-touch-icon.png</podcast:imageSmall>
 	
 	<media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Technology</media:category>
@@ -160,10 +160,10 @@
 		<item>
 			<title>CPU ⬜ Carré Petit Utile : Le programme radio des gens du numérique, tous les Jeudi à 11h sur Radio FMR</title>
 			<link>https://cpu.pm</link>
-			<itunes:image href="https://cpu.pm/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
-			<googleplay:image href="https://cpu.pm/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
-			<podcast:imageLarge>https://cpu.pm/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png</podcast:imageLarge>
-			<podcast:imageMedium size="800">https://cpu.pm/themes/cpu-15/assets/android-chrome-512x512.png</podcast:imageMedium>
+			<itunes:image href="https://cpu.pm/themes/cpu26/assets/cpu_logo_exagerement_gros_pour_apple.png" />
+			<googleplay:image href="https://cpu.pm/themes/cpu26/assets/cpu_logo_exagerement_gros_pour_apple.png" />
+			<podcast:imageLarge>https://cpu.pm/themes/cpu26/assets/cpu_logo_exagerement_gros_pour_apple.png</podcast:imageLarge>
+			<podcast:imageMedium size="800">https://cpu.pm/themes/cpu26/assets/android-chrome-512x512.png</podcast:imageMedium>
 			<podcast:imageSmall size="240">https://cpu.pm/assets/apple-touch-icon.png</podcast:imageSmall>
 			<dc:creator>{{tpl:EntryAuthorCommonName encode_xml="1"}}</dc:creator>
 			<itunes:author>{{tpl:EntryAuthorCommonName encode_xml="1"}}</itunes:author>
