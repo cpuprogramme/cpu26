@@ -2,7 +2,7 @@
 	"name": "CPU ⬜ Carré Petit Utile",
 	"short_name": "CPU ⬜",
     "description": "Le programme radio des gens du numérique. Tous les Jeudi à 11h sur Radio FMR (89.1FM, Toulouse)",
-    "start_url": "https://cpu.dascritch.net",
+    "start_url": "https://cpu.pm",
 	"icons": [
 		{
 			"src": "\/assets\/android-chrome-192x192.png",

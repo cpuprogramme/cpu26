@@ -48,7 +48,7 @@
       </tpl:EntrySeries>
       {{tpl:EntryContent absolute_urls="1" encode_xml="1"}}
       &lt;p&gt;
-        &lt;img src=&quot;https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}&quot; alt=&quot;&quot; /&gt;
+        &lt;img src=&quot;https://cpu.pm{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}&quot; alt=&quot;&quot; /&gt;
       &lt;/p&gt;
     </content>
 

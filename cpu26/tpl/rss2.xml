@@ -44,7 +44,7 @@
 
 	<podcast:locked>yes</podcast:locked>
 
-	<media:thumbnail url="https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
+	<media:thumbnail url="https://cpu.pm/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
 	<media:rating>nonadult</media:rating>
 	<itunes:explicit>no</itunes:explicit>
 	<googleplay:explicit>no</googleplay:explicit>
@@ -53,15 +53,15 @@
 	<itunes:type>episodic</itunes:type>
 
 	<image>
-		<url>https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png</url>
+		<url>https://cpu.pm/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png</url>
 		<title>{{tpl:BlogName encode_xml="1"}}</title>
 		<link>{{tpl:BlogURL}}</link>
 	</image>
-	<itunes:image href="https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
-	<googleplay:image href="https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
-	<podcast:imageLarge>https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png</podcast:imageLarge>
-	<podcast:imageMedium>https://cpu.dascritch.net/themes/cpu-15/assets/android-chrome-512x512.png</podcast:imageMedium>
-	<podcast:imageSmall>https://cpu.dascritch.net/assets/apple-touch-icon.png</podcast:imageSmall>
+	<itunes:image href="https://cpu.pm/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
+	<googleplay:image href="https://cpu.pm/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
+	<podcast:imageLarge>https://cpu.pm/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png</podcast:imageLarge>
+	<podcast:imageMedium>https://cpu.pm/themes/cpu-15/assets/android-chrome-512x512.png</podcast:imageMedium>
+	<podcast:imageSmall>https://cpu.pm/assets/apple-touch-icon.png</podcast:imageSmall>
 	
 	<media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Technology</media:category>
 	<itunes:category text="Technology" />
@@ -88,8 +88,8 @@
 			<pubDate>{{tpl:EntryDate rfc822="1"}}</pubDate>
 			<guid isPermaLink="false">{{tpl:EntryFeedID}}</guid>
 			<!-- # itunes:subtitle>{{tpl:EntryContent remove_html="1" encode_xml="1" cut_string="250"}}…</itunes:subtitle  -->
-			<itunes:image href="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}}"/>
-			<googleplay:image href="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}}"/>
+			<itunes:image href="https://cpu.pm{{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}}"/>
+			<googleplay:image href="https://cpu.pm{{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}}"/>
 			<podcast:imageMedium size="800">{{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}}</podcast:imageMedium>
 			<podcast:imageSmall size="240">{{tpl:EntryFirstImage with_category="1" no_tag="1" size="s"}}</podcast:imageSmall>
 			<description>
@@ -109,14 +109,14 @@
 					</tpl:EntrySeries>
 					{{tpl:EntryContent absolute_urls="1"}}
 					<p>
-						<img src="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}" alt="" >
+						<img src="https://cpu.pm{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}" alt="" >
 					</p>
 				]]></content:encoded>
 			</tpl:EpisodeCountLowerThan>
 			<tpl:Attachments>
-				<enclosure url="https://cpu.dascritch.net{{tpl:AttachmentURL}}"
+				<enclosure url="https://cpu.pm{{tpl:AttachmentURL}}"
 				length="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
-				<media:content url="https://cpu.dascritch.net{{tpl:AttachmentURL}}" fileSize="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
+				<media:content url="https://cpu.pm{{tpl:AttachmentURL}}" fileSize="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
 				<!-- # <podcast:alternateEnclosure
 					type="audio/ogg"
 					length="{{tpl:OggFileSize}}"
@@ -147,11 +147,11 @@
 		<item>
 			<title>CPU ⬜ Carré Petit Utile : Le programme radio des gens du numérique, tous les Jeudi à 11h sur Radio FMR</title>
 			<link>https://cpu.pm</link>
-			<itunes:image href="https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
-			<googleplay:image href="https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
-			<podcast:imageLarge>https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png</podcast:imageLarge>
-			<podcast:imageMedium size="800">https://cpu.dascritch.net/themes/cpu-15/assets/android-chrome-512x512.png</podcast:imageMedium>
-			<podcast:imageSmall size="240">https://cpu.dascritch.net/assets/apple-touch-icon.png</podcast:imageSmall>
+			<itunes:image href="https://cpu.pm/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
+			<googleplay:image href="https://cpu.pm/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
+			<podcast:imageLarge>https://cpu.pm/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png</podcast:imageLarge>
+			<podcast:imageMedium size="800">https://cpu.pm/themes/cpu-15/assets/android-chrome-512x512.png</podcast:imageMedium>
+			<podcast:imageSmall size="240">https://cpu.pm/assets/apple-touch-icon.png</podcast:imageSmall>
 			<dc:creator>{{tpl:EntryAuthorCommonName encode_xml="1"}}</dc:creator>
 			<itunes:author>{{tpl:EntryAuthorCommonName encode_xml="1"}}</itunes:author>
 			<pubDate>{{tpl:EntryDate rfc822="1"}}</pubDate>
@@ -166,9 +166,9 @@
 				{{tpl:EntryContent absolute_urls="1"}}
 			]]></content:encoded>
 			<tpl:Attachments>
-				<enclosure url="https://cpu.dascritch.net{{tpl:AttachmentURL}}"
+				<enclosure url="https://cpu.pm{{tpl:AttachmentURL}}"
 				length="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
-				<media:content url="https://cpu.dascritch.net{{tpl:AttachmentURL}}" fileSize="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
+				<media:content url="https://cpu.pm{{tpl:AttachmentURL}}" fileSize="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
 				<!-- # <podcast:alternateEnclosure
 					type="audio/ogg"
 					length="{{tpl:OggFileSize}}"
