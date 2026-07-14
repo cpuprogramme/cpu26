@@ -1099,10 +1099,12 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 
 	picture {
 		flex : 0 1 min( var(--illus-width), 25vb );
+		aspect-ratio: 1 / 1;
+		display : grid;
+		align-content: center;
 
 		img {
-			width :  100%;
-			aspect-ratio: 1 / 1;
+			width :100%;
 			display : grid; /* nécessaire pour virer le comportement inline */
 		}
 	}
