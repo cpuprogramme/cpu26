@@ -32,6 +32,23 @@
 	<!-- First page -->
 	<tpl:SysIf current_mode="default">
 
+		<nav>
+			<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+				<li class="not-small" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+					<a href="{{tpl:BlogURL}}" aria-label="Revenir à la page de garde" itemprop="item">
+						<span itemprop="name">CPU</span>
+					</a>
+					<meta itemprop="position" content="1">
+				</li>
+				<li aria-hidden="true">⬜</li>
+
+				<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+					L'émission <q>Carré Petit Utile</q> de Radio &lt;FMR&gt;
+				</li>
+			</ul>
+		</nav>
+
+
 		<tpl:Entries type="page" url="-highfront">
 			{{tpl:EntryContent}}
 		</tpl:Entries>
