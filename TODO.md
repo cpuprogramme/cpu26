@@ -12,6 +12,7 @@ DONE
  - changer le NDD Change base URL to cpu.pm
  - Liens sociaux rafraichis dans le flux podcast
  - flux podcast rappatrié de feedburner
+ - la soumission de commentaire ne retourne plus une 404 malgré un traitement correct
 
 TODO
 ----
