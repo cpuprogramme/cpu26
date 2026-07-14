@@ -33,7 +33,6 @@ Vérifier sur :
 Bugs dotclear et tickets ouverts : 
  - https://codeberg.org/Dotclear/dotclear/issues/164 `widgetcontainerformat` n'est jamais exploitée.
  - https://codeberg.org/Dotclear/dotclear/issues/165 Pouvoir ré-accéder aux variables front `$attach_f` et `$attach_i` , et donc -réécrire le plugin dotclear de CPUaudio
- - url `/tags` n'est plus là
  - https://codeberg.org/Dotclear/dotclear/issues/166 Créer un tag `<tpl:SysIfComment>`
 
 Autres bugs notés :

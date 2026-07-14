@@ -1,0 +1,51 @@
+{{tpl:extends parent="__layout.html"}}
+<tpl:Block name="head-title">
+	<title>{{tpl:lang Tags}} - {{tpl:BlogName encode_html="1"}}</title>
+</tpl:Block>
+<tpl:Block name="meta-robots">
+	<meta name="ROBOTS" content="{{tpl:BlogMetaRobots robots="NOINDEX"}}">
+</tpl:Block>
+<tpl:Block name="head-linkrel">
+	<link rel="contents" href="{{tpl:BlogArchiveURL}}" title="{{tpl:lang Archives}}">
+	<link rel="meta" type="application/xbel+xml" title="Blogroll" href="{{tpl:BlogrollXbelLink}}">
+</tpl:Block>
+<tpl:Block name="body-tag">
+
+	<body class="dc-tags">
+</tpl:Block>
+<tpl:Block name="main-content">
+
+	<nav>
+		<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li class="not-small" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:BlogURL}}" aria-label="Revenir à la page de garde" itemprop="item">
+					<span itemprop="name">CPU</span>
+				</a>
+				<meta itemprop="position" content="1">
+			</li>
+			<li aria-hidden="true">⬜</li>
+
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="/tags/" itemprop="item">
+						<span itemprop="name">Mots-clés</span>	
+					</a>
+				<meta itemprop="position" content="2">
+			</li>
+		</ul>
+	</nav>
+
+	<div id="content-info">
+		<header id="p316" class="full banner-article fond_bleu" role="article">
+			<div class="encloser">
+				<h2 class="post-title">Tags</h2>
+			</div>
+		</header>
+	</div>
+	<div class="content-inner">
+		<ul class="tags">
+			<tpl:Tags>
+				<li><a href="{{tpl:TagURL}}" class="tag{{tpl:TagRoundPercent}}">{{tpl:TagID}}</a></li>
+			</tpl:Tags>
+		</ul>
+	</div>
+</tpl:Block>
