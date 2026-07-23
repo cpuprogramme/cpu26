@@ -333,7 +333,7 @@ details {
 		}
 	}
 	summary::marker {
-		content : "▷ ";
+		content : "▷\00a0\00a0";
 	}
 }
 
@@ -343,7 +343,7 @@ details::details-content {
 
 
 details[open] summary::marker {
-	content : "▽ ";
+	content : "▽\00a0\00a0";
 }
 
 audio, canvas, video {
