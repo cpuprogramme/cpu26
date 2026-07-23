@@ -100,63 +100,63 @@ function issue57() {
 }
 
 function assistant() {
-		const search_element = document.querySelector('input[type="search"]');
-		// pour éviter le chargement très lourd de l'image d'entrée
-		search_element.insertAdjacentHTML('beforebegin','<div id="bulle"></div><img src="/themes/cpu26/clippy.png" id="clippy" alt="" />');
+	const search_element = document.querySelector('input[type="search"]');
+	// pour éviter le chargement très lourd de l'image d'entrée
+	search_element.insertAdjacentHTML('beforebegin','<div id="bulle"></div><img src="/themes/cpu26/clippy.png" id="clippy" alt="" />');
 
-		const bulle_element = document.querySelector('#bulle');
-		const clippy_element = document.querySelector('#clippy');
-		const frame_cols = 27;
-		const fps = 6;
-		const clippy_a_la_class = 'show_clippy';
-		let frame_caller = false;
-		let clips = [];
+	const bulle_element = document.querySelector('#bulle');
+	const clippy_element = document.querySelector('#clippy');
+	const frame_cols = 27;
+	const fps = 6;
+	const clippy_a_la_class = 'show_clippy';
+	let frame_caller = false;
+	let clips = [];
 
-		function frame(f) {
-			const x = - (f % frame_cols) * clippy_element.clientWidth; 
-			const y = - Math.floor(f / frame_cols) * clippy_element.clientHeight;
-			clippy_element.style.objectPosition = `${x}px ${y}px`;
-		}
+	function frame(f) {
+		const x = - (f % frame_cols) * clippy_element.clientWidth; 
+		const y = - Math.floor(f / frame_cols) * clippy_element.clientHeight;
+		clippy_element.style.objectPosition = `${x}px ${y}px`;
+	}
 
 
-		function no_frames() {
-			window.clearInterval(frame_caller);
-			clips = [];
-		}
+	function no_frames() {
+		window.clearInterval(frame_caller);
+		clips = [];
+	}
 
-		function interclip() {
-				const f = clips.shift();
-				if (f == undefined) {
-					window.clearInterval(frame_caller);
-					return;
-				}
-				frame(f);
+	function interclip() {
+			const f = clips.shift();
+			if (f == undefined) {
+				window.clearInterval(frame_caller);
+				return;
 			}
-
-		function frames(start, end) {
-			no_frames();
-			for (let f = start ; f < end ; f++) {
-				clips.push(f);
-			}
-			interclip();
-			frame_caller = window.setInterval(interclip, 1000/fps);
+			frame(f);
 		}
 
+	function frames(start, end) {
+		no_frames();
+		for (let f = start ; f < end ; f++) {
+			clips.push(f);
+		}
+		interclip();
+		frame_caller = window.setInterval(interclip, 1000/fps);
+	}
 
-		search_element.addEventListener('focus', () => {
 
-			frame(0);
-			
-			document.body.classList.add(clippy_a_la_class);
-			const verbiage = texts[Math.floor(Math.random() * texts.length )];
-			frames(verbiage.s,verbiage.e);
-			bulle_element.innerHTML = verbiage.t;
-		});
-		search_element.addEventListener('blur', () => {
-			no_frames();
-			bulle_element.innerHTML = '';
-			document.body.classList.remove(clippy_a_la_class);
-		});
+	search_element.addEventListener('focus', () => {
+
+		frame(0);
+		
+		document.body.classList.add(clippy_a_la_class);
+		const verbiage = texts[Math.floor(Math.random() * texts.length )];
+		frames(verbiage.s,verbiage.e);
+		bulle_element.innerHTML = verbiage.t;
+	});
+	search_element.addEventListener('blur', () => {
+		no_frames();
+		bulle_element.innerHTML = '';
+		document.body.classList.remove(clippy_a_la_class);
+	});
 }
 
 function main() {
