@@ -88,8 +88,11 @@ xmlns="http://www.w3.org/1999/xhtml">
 				<p><xsl:value-of select="/rss/channel/description"/></p>
 			</div>
 			<div id="what">
-			<h3>Vous êtes sur le flux podcast de l'émission au format fil RSS</h3>
-			<p>Normalement, vous devriez plutôt consulter cette page via une application de podcast. <a href="https://cpu.pm/pages/Podcast">Plus d'informations en suivant ce lien.</a></p>
+			<h3>Vous êtes sur le flux podcast de l'émission CPU</h3>
+			<p>
+				Sur cette adresse est délivré un contenu technique (un fil RSS) uniquement destiné entre ordinateurs.
+			</p>
+			<p>Normalement, vous devriez plutôt consulter cette page via une application de podcast. <a href="https://cpu.pm/pages/Podcast">Plus d'informations en suivant ce lien, et comment facilement vous abonner à ce flux.</a></p>
 			<h3>{{tpl:lang What is an RSS feed?}}</h3>
 			<p>{{tpl:lang RSS feed is a free blog summary. It provides content
 			(either posts or comments) or  summaries of content, together with links
