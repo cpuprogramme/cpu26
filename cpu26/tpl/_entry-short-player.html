@@ -4,7 +4,7 @@
 		<!-- manque le lien sur l'illus -->
 		{{tpl:include src="_entry-illustration.html"}}
 		<div>
-			<a href="{{tpl:EntryURL}}">
+			<a href="{{tpl:EntryURL}}<tpl:SysIf search_count="&gt;1">#:~:text={{tpl:SysSearchString string="%1$s"}}</tpl:SysIf>">
 				<h3 class="post-title">{{tpl:EntryTitle encode_html="1"}}</h3>
 
 				<p class="post-info">
@@ -38,3 +38,4 @@
 		</div>
 	</div>
 </article>
+
