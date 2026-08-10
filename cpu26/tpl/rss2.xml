@@ -18,9 +18,9 @@
 	<link rel="self" href="{{tpl:SysSelfURI}}" type="application/rss+xml"/>
 	<link rel="hub" href="https://pubsubhubbub.appspot.com/" xmlns="http://www.w3.org/2005/Atom" />
 
-	<description>CPU ⬜ Carré Petit Utile : Le programme radio des gens du numérique, tous les Jeudi à 11h sur Radio FMR</description>
-	<itunes:summary>CPU ⬜ Carré Petit Utile : Le programme radio des gens du numérique, tous les Jeudi à 11h sur Radio FMR</itunes:summary>
-	<googleplay:description>CPU ⬜ Carré Petit Utile : Le programme radio des gens du numérique, tous les Jeudi à 11h sur Radio FMR</googleplay:description>
+	<description>{{tpl:BlogDescription encode_xml="1"}}</description>
+	<itunes:summary>{{tpl:BlogDescription encode_xml="1"}}</itunes:summary>
+	<googleplay:description>{{tpl:BlogDescription encode_xml="1"}}</googleplay:description>
 	<language>{{tpl:BlogLanguage}}</language>
 	<spotify:countryOfOrigin>fr</spotify:countryOfOrigin>
 	<podcast:location latlon="43.6153,1.4487" osm_id="N3272534720">FR|Toulouse</podcast:location>
@@ -32,8 +32,8 @@
 		<itunes:email>annonces@cpu.pm</itunes:email>
 		<itunes:name>{{tpl:BlogEditor encode_xml="1"}}</itunes:name>
 	</itunes:owner>
-	<googleplay:author>{{tpl:BlogEditor encode_xml="1"}}</googleplay:author>
 	<googleplay:email>annonces@cpu.pm</googleplay:email>
+	<googleplay:author>{{tpl:BlogEditor encode_xml="1"}}</googleplay:author>
 	<podcast:email>annonces@cpu.pm</podcast:email>
 	<podcast:verificationEmail>annonces@cpu.pm</podcast:verificationEmail>
 	<podcast:guid>539609d9-d651-5bad-aa7b-a5956fba7725</podcast:guid>
