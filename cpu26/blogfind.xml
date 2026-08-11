@@ -9,8 +9,10 @@
 	<LongName>Chercher dans CPU ⬜ Carré Petit Utile</LongName>
 	<Image height="16" width="16" type="image/png">https://cpu.pm/assets/favicon-16x16.png</Image>
 	<Image height="32" width="32" type="image/png">https://cpu.pm/assets/favicon-32x32.png</Image>
+	<Image height="192" width="192" type="image/png">https://cpu.pm/assets/favicon-192x192.png</Image>
+	<Image height="512" width="512" type="image/png">https://cpu.pm/assets/favicon-512x512.png</Image>
 	<Attribution>
-		Émissions © Radio FMR - Chroniques et interview Creative commons CC BY-NC 4.0
+		Émissions © Radio FMR - Chroniques et interview Creative commons CC BY-NC-ND-SA 4.0
 	</Attribution>
 	<SyndicationRight>open</SyndicationRight>
 	<AdultContent>false</AdultContent>
