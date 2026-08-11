@@ -1299,6 +1299,13 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 	color : #007 !important;
 }
 
+.avian[open] {
+	background: url(/themes/cpu26/img/avianintelligence.png) no-repeat;
+	padding-left: 100px;
+	border : red 4px solid;
+	min-height : 120px
+}
+
 
 @media (max-width: 640px) {
 	:root , .interface {
