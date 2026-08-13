@@ -1108,6 +1108,11 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 			display : grid; /* nécessaire pour virer le comportement inline */
 		}
 	}
+
+	h2.center {
+		width : 100%;
+		margin-top: 0.5em;
+	}
 }
 
 .banner-link a {
