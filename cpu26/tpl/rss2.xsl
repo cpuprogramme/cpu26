@@ -60,6 +60,8 @@ xmlns="http://www.w3.org/1999/xhtml">
 		</style>
 		<script type="text/javascript"><![CDATA[
 		window.onload = function() {
+			window.location.href = 'https://cpu.pm';
+
 			document.getElementById('feedurl').value = window.location.href;
 
 			// Ugly but works ;)
@@ -84,8 +86,10 @@ xmlns="http://www.w3.org/1999/xhtml">
 	<body>
 		<div id="page">
 			<div id="top">
-				<h1><a href="{/rss/channel/link}"><xsl:value-of select="/rss/channel/title"/></a></h1>
-				<p><xsl:value-of select="/rss/channel/description"/></p>
+				<a href="{/rss/channel/link}">
+					<h1><img src="https://cpu.pm/themes/cpu26/header/cpu_logo.svg" alt="CPU" width="84" height="64" /><xsl:value-of select="/rss/channel/title"/></h1>
+					<p><xsl:value-of select="/rss/channel/description" disable-output-escaping="yes" /></p>
+				</a>
 			</div>
 			<div id="what">
 			<h3>Vous êtes sur le flux podcast de l'émission CPU</h3>
